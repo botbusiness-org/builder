@@ -629,7 +629,7 @@ export const TIMEOUT_ERROR_DESCRIPION = "Server is busy.";
 export const SIGN_UP_SUCCESS = "Account created! Await admin activation. ";
 
 export const API_PAGE_PARAGRAPH =
-  "Your secret Langflow API keys are listed below. Do not share your API key with others, or expose it in the browser or other client-side code.";
+  "Your secret Botbusiness API keys are listed below. Do not share your API key with others, or expose it in the browser or other client-side code.";
 
 export const API_PAGE_USER_KEYS =
   "This user does not have any keys assigned at the moment.";
@@ -711,7 +711,7 @@ export const EDIT_CODE_TITLE = "Edit Code";
 export const MY_COLLECTION_DESC =
   "Manage your projects. Download and upload entire collections.";
 export const STORE_DESC = "Explore community-shared flows and components.";
-export const STORE_TITLE = "Langflow Store";
+export const STORE_TITLE = "Botbusiness Store";
 export const NO_API_KEY = "You don't have an API key.";
 export const INSERT_API_KEY = "Insert your Langflow API key.";
 export const INVALID_API_KEY = "Your API key is not valid. ";

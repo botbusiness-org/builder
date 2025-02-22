@@ -1,16 +1,12 @@
 import AlertDropdown from "@/alerts/alertDropDown";
-import DataStaxLogo from "@/assets/DataStaxLogo.svg?react";
-import LangflowLogo from "@/assets/LangflowLogo.svg?react";
+import BotbusinessLogo from "@/assets/BotbusinessLogo.svg?react";
 import ForwardedIconComponent from "@/components/common/genericIconComponent";
 import ShadTooltip from "@/components/common/shadTooltipComponent";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { CustomOrgSelector } from "@/customization/components/custom-org-selector";
 import { CustomProductSelector } from "@/customization/components/custom-product-selector";
-import {
-  ENABLE_DATASTAX_LANGFLOW,
-  ENABLE_NEW_LOGO,
-} from "@/customization/feature-flags";
+import { ENABLE_DATASTAX_LANGFLOW } from "@/customization/feature-flags";
 import { useCustomNavigate } from "@/customization/hooks/use-custom-navigate";
 import useTheme from "@/customization/hooks/use-custom-theme";
 import { useResetDismissUpdateAll } from "@/hooks/use-reset-dismiss-update-all";
@@ -18,7 +14,6 @@ import useAlertStore from "@/stores/alertStore";
 import { useEffect, useRef, useState } from "react";
 import { AccountMenu } from "./components/AccountMenu";
 import FlowMenu from "./components/FlowMenu";
-import GithubStarComponent from "./components/GithubStarButton";
 
 export default function AppHeader(): JSX.Element {
   const notificationCenter = useAlertStore((state) => state.notificationCenter);
@@ -65,13 +60,7 @@ export default function AppHeader(): JSX.Element {
           className="mr-1 flex h-8 w-8 items-center"
           data-testid="icon-ChevronLeft"
         >
-          {ENABLE_DATASTAX_LANGFLOW ? (
-            <DataStaxLogo className="fill-black dark:fill-[white]" />
-          ) : ENABLE_NEW_LOGO ? (
-            <LangflowLogo className="h-5 w-6" />
-          ) : (
-            <span className="fill-black text-2xl dark:fill-white">⛓️</span>
-          )}
+          <BotbusinessLogo className="h-5 w-6" />
         </Button>
         {ENABLE_DATASTAX_LANGFLOW && (
           <>
@@ -91,19 +80,6 @@ export default function AppHeader(): JSX.Element {
         className={`flex items-center gap-2`}
         data-testid="header_right_section_wrapper"
       >
-        {!ENABLE_DATASTAX_LANGFLOW && (
-          <>
-            <Button
-              unstyled
-              className="hidden items-center whitespace-nowrap pr-2 2xl:inline"
-              onClick={() =>
-                window.open("https://github.com/langflow-ai/langflow", "_blank")
-              }
-            >
-              <GithubStarComponent />
-            </Button>
-          </>
-        )}
         <AlertDropdown
           notificationRef={notificationContentRef}
           onClose={() => setActiveState(null)}

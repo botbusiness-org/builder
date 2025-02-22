@@ -145,16 +145,7 @@ const HomePage = ({ type }) => {
                     </div>
                   ) : (
                     <div className="pt-2 text-center text-sm text-secondary-foreground">
-                      No saved or custom components. Learn more about{" "}
-                      <a
-                        href="https://docs.langflow.org/components-custom-components"
-                        target="_blank"
-                        rel="noreferrer"
-                        className="underline"
-                      >
-                        creating custom components
-                      </a>
-                      , or browse the store.
+                      No saved or custom components.
                     </div>
                   )}
                 </div>

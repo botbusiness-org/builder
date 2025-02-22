@@ -73,7 +73,7 @@ export default function SettingsPage(): JSX.Element {
   if (!ENABLE_DATASTAX_LANGFLOW) {
     const langflowItems = [
       {
-        title: "Langflow API Keys",
+        title: "Botbusiness API Keys",
         href: "/settings/api-keys",
         icon: (
           <ForwardedIconComponent
@@ -83,7 +83,7 @@ export default function SettingsPage(): JSX.Element {
         ),
       },
       {
-        title: "Langflow Store",
+        title: "Botbusiness Store",
         href: "/settings/store",
         icon: (
           <ForwardedIconComponent
@@ -101,7 +101,7 @@ export default function SettingsPage(): JSX.Element {
     <PageLayout
       backTo={"/"}
       title="Settings"
-      description="Manage the general settings for Langflow."
+      description="Manage general settings for the Botbusiness Builder."
     >
       <SidebarProvider width="15rem" defaultOpen={false}>
         <SideBarButtonsComponent items={sidebarNavItems} />
