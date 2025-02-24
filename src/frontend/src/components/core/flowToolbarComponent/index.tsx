@@ -13,6 +13,7 @@ import ShareModal from "../../../modals/shareModal";
 import useFlowStore from "../../../stores/flowStore";
 import { useShortcutsStore } from "../../../stores/shortcuts";
 import { useStoreStore } from "../../../stores/storeStore";
+import { useUtilityStore } from "../../../stores/utilityStore";
 import { classNames, isThereModal } from "../../../utils/utils";
 import ForwardedIconComponent from "../../common/genericIconComponent";
 
@@ -51,6 +52,7 @@ export default function FlowToolbar(): JSX.Element {
   const validApiKey = useStoreStore((state) => state.validApiKey);
   const hasApiKey = useStoreStore((state) => state.hasApiKey);
   const currentFlow = useFlowStore((state) => state.currentFlow);
+  const featureFlags = useUtilityStore((state) => state.featureFlags);
 
   useEffect(() => {
     if (open) {
@@ -161,7 +163,7 @@ export default function FlowToolbar(): JSX.Element {
                 </div>
               </>
             )}
-            {ENABLE_LANGFLOW_STORE && (
+            {ENABLE_LANGFLOW_STORE && featureFlags?.store && (
               <div className="flex items-center gap-2">
                 <div
                   className={`side-bar-button ${

@@ -11,12 +11,14 @@ import { useCustomNavigate } from "@/customization/hooks/use-custom-navigate";
 import useTheme from "@/customization/hooks/use-custom-theme";
 import { useResetDismissUpdateAll } from "@/hooks/use-reset-dismiss-update-all";
 import useAlertStore from "@/stores/alertStore";
+import { useUtilityStore } from "@/stores/utilityStore";
 import { useEffect, useRef, useState } from "react";
 import { AccountMenu } from "./components/AccountMenu";
 import FlowMenu from "./components/FlowMenu";
 
 export default function AppHeader(): JSX.Element {
   const notificationCenter = useAlertStore((state) => state.notificationCenter);
+  const featureFlags = useUtilityStore((state) => state.featureFlags);
   const navigate = useCustomNavigate();
   const [activeState, setActiveState] = useState<"notifications" | null>(null);
   const lastPath = window.location.pathname.split("/").filter(Boolean).pop();
@@ -119,7 +121,7 @@ export default function AppHeader(): JSX.Element {
             </AlertDropdown>
           </ShadTooltip>
         </AlertDropdown>
-        {!ENABLE_DATASTAX_LANGFLOW && (
+        {!ENABLE_DATASTAX_LANGFLOW && featureFlags?.store && (
           <>
             <ShadTooltip
               content="Go to LangflowStore"

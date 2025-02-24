@@ -20,6 +20,7 @@ import { useHotkeys } from "react-hotkeys-hook";
 import useAlertStore from "../../../../stores/alertStore";
 import useFlowStore from "../../../../stores/flowStore";
 import { useTypesStore } from "../../../../stores/typesStore";
+import { useUtilityStore } from "../../../../stores/utilityStore";
 import { APIClassType } from "../../../../types/api";
 import sensitiveSort from "../extraSidebarComponent/utils/sensitive-sort";
 import isWrappedWithClass from "../PageComponent/utils/is-wrapped-with-class";
@@ -68,6 +69,7 @@ export function FlowSidebarComponent() {
   );
 
   const hasStore = useStoreStore((state) => state.hasStore);
+  const featureFlags = useUtilityStore((state) => state.featureFlags);
   const setErrorData = useAlertStore((state) => state.setErrorData);
   const { setOpen } = useSidebar();
   const addComponent = useAddComponent();
@@ -359,7 +361,7 @@ export function FlowSidebarComponent() {
       </SidebarContent>
       <SidebarFooter className="border-t p-4 py-3">
         <SidebarMenuButtons
-          hasStore={hasStore}
+          hasStore={hasStore && featureFlags?.store}
           customComponent={customComponent}
           addComponent={addComponent}
         />
