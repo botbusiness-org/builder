@@ -1,5 +1,5 @@
 {
-  "name": "Langflow Dev Container",
+  "name": "Botbusiness Dev Container",
   "build": {
     "context": "..",
     "dockerfile": "Dockerfile"
@@ -14,23 +14,13 @@
       "extensions": [
         "charliermarsh.ruff",
         "njpwerner.autodocstring",
-        "oderwat.indent-rainbow",
         "exiasr.hadolint",
         "actboy168.tasks",
         "GitHub.copilot",
         "ms-python.python",
-        "eamodio.gitlens",
         "ms-vscode.makefile-tools",
         "GitHub.vscode-pull-request-github"
-      ],
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "zsh",
-        "terminal.integrated.profiles.linux": {
-          "zsh": {
-            "path": "/bin/zsh"
-          }
-        }
-      }
+      ]
     }
   },
   "remoteUser": "langflow",
