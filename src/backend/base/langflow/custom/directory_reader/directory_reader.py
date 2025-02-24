@@ -1,5 +1,6 @@
 import ast
 import asyncio
+import os
 import zlib
 from pathlib import Path
 
@@ -42,6 +43,7 @@ class DirectoryReader:
     # Ensure the base path to read the files that contain
     # the custom components from this directory.
     base_path = ""
+    disabled_components = os.getenv("LANGFLOW_DISABLED_COMPONENTS", "").split(",")
 
     def __init__(self, directory_path, *, compress_code_field=False) -> None:
         """Initialize DirectoryReader with a directory path and a flag indicating whether to compress the code."""
@@ -319,6 +321,8 @@ class DirectoryReader:
                 "components": [],
             }
             component_name = filename.split(".")[0]
+            if component_name in self.disabled_components:
+                continue
 
             if "_" in component_name:
                 component_name_camelcase = " ".join(word.title() for word in component_name.split("_"))
