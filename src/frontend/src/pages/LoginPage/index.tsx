@@ -10,6 +10,7 @@ import { SIGNIN_ERROR_ALERT } from "../../constants/alerts_constants";
 import { CONTROL_LOGIN_STATE } from "../../constants/constants";
 import { AuthContext } from "../../contexts/authContext";
 import useAlertStore from "../../stores/alertStore";
+import { useUtilityStore } from "../../stores/utilityStore";
 import { LoginType } from "../../types/api";
 import {
   inputHandlerEventType,
@@ -23,6 +24,8 @@ export default function LoginPage(): JSX.Element {
   const { password, username } = inputState;
   const { login } = useContext(AuthContext);
   const setErrorData = useAlertStore((state) => state.setErrorData);
+
+  const featureFlags = useUtilityStore((state) => state.featureFlags);
 
   function handleInput({
     target: { name, value },
@@ -127,13 +130,15 @@ export default function LoginPage(): JSX.Element {
               </Button>
             </Form.Submit>
           </div>
-          <div className="w-full">
-            <CustomLink to="/signup">
-              <Button className="w-full" variant="outline" type="button">
-                Don't have an account?&nbsp;<b>Sign Up</b>
-              </Button>
-            </CustomLink>
-          </div>
+          {featureFlags?.user_signup && (
+            <div className="w-full">
+              <CustomLink to="/signup">
+                <Button className="w-full" variant="outline" type="button">
+                  Don't have an account?&nbsp;<b>Sign Up</b>
+                </Button>
+              </CustomLink>
+            </div>
+          )}
         </div>
       </div>
     </Form.Root>

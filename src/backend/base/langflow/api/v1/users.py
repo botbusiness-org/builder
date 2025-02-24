@@ -18,6 +18,7 @@ from langflow.services.auth.utils import (
 from langflow.services.database.models.user import User, UserCreate, UserRead, UserUpdate
 from langflow.services.database.models.user.crud import get_user_by_id, update_user
 from langflow.services.deps import get_settings_service
+from langflow.services.settings.feature_flags import FEATURE_FLAGS
 
 router = APIRouter(tags=["Users"], prefix="/users")
 
@@ -28,6 +29,8 @@ async def add_user(
     session: DbSession,
 ) -> User:
     """Add a new user to the database."""
+    if not FEATURE_FLAGS.user_signup:
+        raise HTTPException(status_code=403, detail="Signup is disabled")
     new_user = User.model_validate(user, from_attributes=True)
     try:
         new_user.password = get_password_hash(user.password)

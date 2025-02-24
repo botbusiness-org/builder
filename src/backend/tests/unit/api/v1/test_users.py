@@ -1,7 +1,17 @@
+import pytest
 from fastapi import status
 from httpx import AsyncClient
+from langflow.services.settings.feature_flags import FEATURE_FLAGS
 
 
+@pytest.fixture
+def _set_user_signup():
+    FEATURE_FLAGS.user_signup = True
+    yield
+    FEATURE_FLAGS.user_signup = False
+
+
+@pytest.mark.usefixtures("_set_user_signup")
 async def test_add_user(client: AsyncClient):
     basic_case = {"username": "string", "password": "string"}
     response = await client.post("api/v1/users/", json=basic_case)
@@ -45,6 +55,7 @@ async def test_read_all_users(client: AsyncClient, logged_in_headers_super_user)
     assert "users" in result, "The result must have an 'users' key"
 
 
+@pytest.mark.usefixtures("_set_user_signup")
 async def test_patch_user(client: AsyncClient, logged_in_headers_super_user):
     name = "string"
     updated_name = "string2"
@@ -86,6 +97,7 @@ async def test_reset_password(client: AsyncClient, logged_in_headers, active_use
     assert "username" in result, "The result must have an 'username' key"
 
 
+@pytest.mark.usefixtures("_set_user_signup")
 async def test_delete_user(client: AsyncClient, logged_in_headers_super_user):
     basic_case = {"username": "string", "password": "string"}
     response_ = await client.post("api/v1/users/", json=basic_case)
