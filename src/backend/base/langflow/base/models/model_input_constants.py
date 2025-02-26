@@ -1,9 +1,12 @@
+import os
+
 from typing_extensions import TypedDict
 
 from langflow.base.models.model import LCModelComponent
 from langflow.components.models.amazon_bedrock import AmazonBedrockComponent
 from langflow.components.models.anthropic import AnthropicModelComponent
 from langflow.components.models.azure_openai import AzureChatOpenAIComponent
+from langflow.components.models.botbusiness import BotbusinessAIModelComponent
 from langflow.components.models.google_generative_ai import GoogleGenerativeAIComponent
 from langflow.components.models.groq import GroqModel
 from langflow.components.models.nvidia import NVIDIAModelComponent
@@ -80,6 +83,13 @@ def _get_google_generative_ai_inputs_and_fields():
         )
         raise ImportError(msg) from e
     return google_generative_ai_inputs, create_input_fields_dict(google_generative_ai_inputs, "")
+
+
+def _get_botbusiness_ai_inputs_and_fields():
+    from langflow.components.models.botbusiness import BotbusinessAIModelComponent
+
+    botbusiness_ai_inputs = get_filtered_inputs(BotbusinessAIModelComponent)
+    return botbusiness_ai_inputs, create_input_fields_dict(botbusiness_ai_inputs, "")
 
 
 def _get_openai_inputs_and_fields():
@@ -160,8 +170,27 @@ def _get_sambanova_inputs_and_fields():
 
 
 MODEL_PROVIDERS_DICT: dict[str, ModelProvidersDict] = {}
+DEFAULT_MODEL_PROVIDER: str | None = None
 
 # Try to add each provider
+try:
+    if (
+        os.getenv("BOTBUSINESS_AI_TOKEN")
+        and os.getenv("BOTBUSINESS_AI_URL")
+        and os.getenv("BOTBUSINESS_AI_MODEL_NAMES")
+    ):
+        botbusiness_ai_inputs, botbusiness_ai_fields = _get_botbusiness_ai_inputs_and_fields()
+        MODEL_PROVIDERS_DICT["Botbusiness AI"] = {
+            "fields": botbusiness_ai_fields,
+            "inputs": botbusiness_ai_inputs,
+            "prefix": "",
+            "component_class": BotbusinessAIModelComponent(),
+        }
+        if not DEFAULT_MODEL_PROVIDER:
+            DEFAULT_MODEL_PROVIDER = "Botbusiness AI"
+except ImportError:
+    pass
+
 try:
     openai_inputs, openai_fields = _get_openai_inputs_and_fields()
     MODEL_PROVIDERS_DICT["OpenAI"] = {
@@ -170,6 +199,8 @@ try:
         "prefix": "",
         "component_class": OpenAIModelComponent(),
     }
+    if not DEFAULT_MODEL_PROVIDER:
+        DEFAULT_MODEL_PROVIDER = "OpenAI"
 except ImportError:
     pass
 
@@ -181,6 +212,8 @@ try:
         "prefix": "",
         "component_class": AzureChatOpenAIComponent(),
     }
+    if not DEFAULT_MODEL_PROVIDER:
+        DEFAULT_MODEL_PROVIDER = "Azure OpenAI"
 except ImportError:
     pass
 
@@ -192,6 +225,8 @@ try:
         "prefix": "",
         "component_class": GroqModel(),
     }
+    if not DEFAULT_MODEL_PROVIDER:
+        DEFAULT_MODEL_PROVIDER = "Groq"
 except ImportError:
     pass
 
@@ -203,6 +238,8 @@ try:
         "prefix": "",
         "component_class": AnthropicModelComponent(),
     }
+    if not DEFAULT_MODEL_PROVIDER:
+        DEFAULT_MODEL_PROVIDER = "Anthropic"
 except ImportError:
     pass
 
@@ -214,6 +251,8 @@ try:
         "prefix": "",
         "component_class": NVIDIAModelComponent(),
     }
+    if not DEFAULT_MODEL_PROVIDER:
+        DEFAULT_MODEL_PROVIDER = "NVIDIA"
 except ImportError:
     pass
 
@@ -225,6 +264,8 @@ try:
         "prefix": "",
         "component_class": AmazonBedrockComponent(),
     }
+    if not DEFAULT_MODEL_PROVIDER:
+        DEFAULT_MODEL_PROVIDER = "Amazon Bedrock"
 except ImportError:
     pass
 
@@ -236,6 +277,8 @@ try:
         "prefix": "",
         "component_class": GoogleGenerativeAIComponent(),
     }
+    if not DEFAULT_MODEL_PROVIDER:
+        DEFAULT_MODEL_PROVIDER = "Google Generative AI"
 except ImportError:
     pass
 
@@ -247,6 +290,8 @@ try:
         "prefix": "",
         "component_class": SambaNovaComponent(),
     }
+    if not DEFAULT_MODEL_PROVIDER:
+        DEFAULT_MODEL_PROVIDER = "SambaNova"
 except ImportError:
     pass
 

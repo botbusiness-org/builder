@@ -4,6 +4,7 @@ from langflow.base.agents.agent import LCToolsAgentComponent
 from langflow.base.agents.events import ExceptionWithMessageError
 from langflow.base.models.model_input_constants import (
     ALL_PROVIDER_FIELDS,
+    DEFAULT_MODEL_PROVIDER,
     MODEL_DYNAMIC_UPDATE_FIELDS,
     MODEL_PROVIDERS_DICT,
 )
@@ -40,11 +41,11 @@ class AgentComponent(ToolCallingAgentComponent):
             display_name="Model Provider",
             info="The provider of the language model that the agent will use to generate responses.",
             options=[*sorted(MODEL_PROVIDERS_DICT.keys()), "Custom"],
-            value="OpenAI",
+            value=DEFAULT_MODEL_PROVIDER,
             real_time_refresh=True,
             input_types=[],
         ),
-        *MODEL_PROVIDERS_DICT["OpenAI"]["inputs"],
+        *(MODEL_PROVIDERS_DICT[DEFAULT_MODEL_PROVIDER]["inputs"] if DEFAULT_MODEL_PROVIDER else {}),
         MultilineInput(
             name="system_prompt",
             display_name="Agent Instructions",

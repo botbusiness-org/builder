@@ -3,6 +3,7 @@ from .amazon_bedrock import AmazonBedrockComponent
 from .anthropic import AnthropicModelComponent
 from .azure_openai import AzureChatOpenAIComponent
 from .baidu_qianfan_chat import QianfanChatEndpointComponent
+from .botbusiness import BotbusinessAIModelComponent
 from .cohere import CohereComponent
 from .deepseek import DeepSeekModelComponent
 from .google_generative_ai import GoogleGenerativeAIComponent
@@ -26,6 +27,7 @@ __all__ = [
     "AmazonBedrockComponent",
     "AnthropicModelComponent",
     "AzureChatOpenAIComponent",
+    "BotbusinessAIModelComponent",
     "ChatOllamaComponent",
     "ChatVertexAIComponent",
     "CohereComponent",
