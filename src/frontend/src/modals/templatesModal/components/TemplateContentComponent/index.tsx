@@ -99,7 +99,7 @@ export default function TemplateContentComponent({
             examples={filteredExamples}
             onCardClick={handleCardClick}
           />
-        ) : (
+        ) : searchQuery ? (
           <div className="flex flex-col items-center justify-center px-4 py-12 text-center">
             <p className="text-sm text-secondary-foreground">
               No templates found.{" "}
@@ -110,6 +110,13 @@ export default function TemplateContentComponent({
                 Clear your search
               </a>{" "}
               and try a different query.
+            </p>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center justify-center px-4 py-12 text-center">
+            <p className="text-sm text-secondary-foreground">
+              Work in progress: Templates in this category will be available
+              soon.
             </p>
           </div>
         )}

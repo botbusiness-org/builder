@@ -32,27 +32,38 @@ export default function TemplatesModal({
       ],
     },
     {
-      title: "Use Cases",
+      title: "By Stage",
       items: [
-        { title: "Assistants", icon: "BotMessageSquare", id: "assistants" },
-        { title: "Classification", icon: "Tags", id: "classification" },
-        { title: "Coding", icon: "TerminalIcon", id: "coding" },
+        { title: "Idea & Validation", icon: "rocket", id: "idea-validation" },
+        { title: "Build & Launch", icon: "hammer", id: "build-launch" },
+        { title: "Autopilot Operations", icon: "settings", id: "operations" },
         {
-          title: "Content Generation",
-          icon: "Newspaper",
-          id: "content-generation",
+          title: "Growth & Marketing",
+          icon: "trending-up",
+          id: "growth-marketing",
         },
-        { title: "Q&A", icon: "Database", id: "q-a" },
-        // { title: "Summarization", icon: "Bot", id: "summarization" },
-        // { title: "Web Scraping", icon: "CodeXml", id: "web-scraping" },
+        {
+          title: "Finance & Monetization",
+          icon: "wallet",
+          id: "finance-monetization",
+        },
       ],
     },
     {
-      title: "Methodology",
+      title: "By Sector",
       items: [
-        { title: "Prompting", icon: "MessagesSquare", id: "chatbots" },
-        { title: "RAG", icon: "Database", id: "rag" },
-        { title: "Agents", icon: "Bot", id: "agents" },
+        { title: "E-Commerce", icon: "shopping-cart", id: "commerce" },
+        {
+          title: "Content & Creativity",
+          icon: "pen-tool",
+          id: "content-creativity",
+        },
+        { title: "Automated Services", icon: "bot", id: "services" },
+        {
+          title: "Education & Coaching",
+          icon: "book-open",
+          id: "education-coaching",
+        },
       ],
     },
   ];
