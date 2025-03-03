@@ -179,7 +179,7 @@ export default function ChatView({
               <div className="flex flex-col items-center justify-center gap-4 p-8">
                 <BotbusinessLogo
                   title="Botbusiness logo"
-                  className="h-10 w-10 scale-[1.5]"
+                  className="h-10 w-10 scale-[1.5] dark:invert"
                 />
                 <div className="flex flex-col items-center justify-center">
                   <h3 className="mt-2 pb-2 text-2xl font-semibold text-primary">

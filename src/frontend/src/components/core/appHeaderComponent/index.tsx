@@ -62,7 +62,7 @@ export default function AppHeader(): JSX.Element {
           className="mr-1 flex h-8 w-8 items-center"
           data-testid="icon-ChevronLeft"
         >
-          <BotbusinessLogo className="h-5 w-6" />
+          <BotbusinessLogo className="h-5 w-6 dark:invert" />
         </Button>
         {ENABLE_DATASTAX_LANGFLOW && (
           <>

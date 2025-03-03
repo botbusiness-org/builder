@@ -6,7 +6,7 @@ export default function LogoIcon() {
       <div className="flex h-8 w-8 items-center justify-center">
         <BotbusinessLogo
           title="Botbusiness Logo"
-          className="absolute h-[18px] w-[18px]"
+          className="absolute h-[18px] w-[18px] dark:invert"
         />
       </div>
     </div>

@@ -71,7 +71,7 @@ export default function LoginPage(): JSX.Element {
         <div className="flex w-72 flex-col items-center justify-center gap-2">
           <BotbusinessLogo
             title="Botbusiness logo"
-            className="mb-4 h-10 w-10 scale-[1.5]"
+            className="mb-4 h-10 w-10 scale-[1.5] dark:invert"
           />
           <span className="mb-6 text-2xl font-semibold text-primary">
             Botbusiness Builder
