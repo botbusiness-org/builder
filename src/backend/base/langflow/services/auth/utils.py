@@ -93,6 +93,24 @@ async def get_current_user(
     )
 
 
+async def get_current_user_optional(
+    token: Annotated[str, Security(oauth2_login)],
+    query_param: Annotated[str, Security(api_key_query)],
+    header_param: Annotated[str, Security(api_key_header)],
+    db: Annotated[AsyncSession, Depends(get_session)],
+) -> User | None:
+    if token:
+        return await get_current_user_by_jwt(token, db)
+    try:
+        user = await api_key_security(query_param, header_param)
+        if user:
+            return user
+    except HTTPException:
+        return None
+
+    return None
+
+
 async def get_current_user_by_jwt(
     token: str,
     db: AsyncSession,

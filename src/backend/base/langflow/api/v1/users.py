@@ -7,7 +7,7 @@ from sqlalchemy.exc import IntegrityError
 from sqlmodel import select
 from sqlmodel.sql.expression import SelectOfScalar
 
-from langflow.api.utils import CurrentActiveUser, DbSession
+from langflow.api.utils import CurrentActiveUser, CurrentUserOptional, DbSession
 from langflow.api.v1.schemas import UsersResponse
 from langflow.initial_setup.setup import get_or_create_default_folder
 from langflow.services.auth.utils import (
@@ -27,9 +27,11 @@ router = APIRouter(tags=["Users"], prefix="/users")
 async def add_user(
     user: UserCreate,
     session: DbSession,
+    current_user: CurrentUserOptional,
 ) -> User:
     """Add a new user to the database."""
-    if not FEATURE_FLAGS.user_signup:
+    is_active_superuser = current_user and current_user.is_active and current_user.is_superuser
+    if not is_active_superuser and not FEATURE_FLAGS.user_signup:
         raise HTTPException(status_code=403, detail="Signup is disabled")
     new_user = User.model_validate(user, from_attributes=True)
     try:
