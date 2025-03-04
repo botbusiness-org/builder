@@ -166,10 +166,10 @@ const ListComponent = ({ flowData }: { flowData: FlowType }) => {
           open={openDelete}
           setOpen={setOpenDelete}
           onConfirm={handleDelete}
-          description={descriptionModal}
+          description={descriptionModal === "flow" ? "bot" : descriptionModal}
           note={
             !flowData.is_component
-              ? "Deleting the selected flow will remove all associated messages."
+              ? "Deleting the selected bot will remove all associated messages."
               : ""
           }
         >

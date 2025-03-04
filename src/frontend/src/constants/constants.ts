@@ -98,13 +98,13 @@ export const limitScrollFieldsModal = 10;
  * The base text for subtitle of Export Dialog (Toolbar)
  * @constant
  */
-export const EXPORT_DIALOG_SUBTITLE = "Export flow as JSON file.";
+export const EXPORT_DIALOG_SUBTITLE = "Export bot as JSON file.";
 /**
  * The base text for subtitle of Flow Settings (Menubar)
  * @constant
  */
 export const SETTINGS_DIALOG_SUBTITLE =
-  "Customize your flow details and settings.";
+  "Customize your bot details and settings.";
 
 /**
  * The base text for subtitle of Flow Logs (Menubar)
@@ -118,7 +118,7 @@ export const LOGS_DIALOG_SUBTITLE =
  * @constant
  */
 export const CODE_DIALOG_SUBTITLE =
-  "Export your flow to integrate it using this code.";
+  "Export your bot to integrate it using this code.";
 
 /**
  * The base text for subtitle of Chat Form
@@ -171,7 +171,7 @@ export const TEXT_DIALOG_SUBTITLE = "Edit text content.";
  * @constant
  */
 export const IMPORT_DIALOG_SUBTITLE =
-  "Import flows from a JSON file or choose from pre-existing examples.";
+  "Import bots from a JSON file or choose from pre-existing examples.";
 
 /**
  * The text that shows when a tooltip is empty
@@ -189,16 +189,16 @@ export const CSVError = "Error loading CSV";
 
 export const PDFLoadErrorTitle = "Error loading PDF";
 
-export const PDFCheckFlow = "Please check your flow and try again";
+export const PDFCheckFlow = "Please check your bot and try again";
 
 export const PDFErrorTitle = "PDF Output";
 
-export const PDFLoadError = "Run the flow to see the pdf";
+export const PDFLoadError = "Run the bot to see the pdf";
 
 export const IMGViewConstant = "Expand the view to see the image";
 
 export const IMGViewErrorMSG =
-  "Run the flow or inform a valid url to see your image";
+  "Run the bot or inform a valid url to see your image";
 
 export const IMGViewErrorTitle = "Image output";
 
@@ -207,7 +207,7 @@ export const IMGViewErrorTitle = "Image output";
  * @constant
  */
 export const EXPORT_CODE_DIALOG =
-  "Generate the code to integrate your flow into an external application.";
+  "Generate the code to integrate your bot into an external application.";
 
 /**
  * The base text for subtitle of code dialog
@@ -705,12 +705,12 @@ export const TEXT_INPUT_MODAL_TITLE = "Inputs";
 export const OUTPUTS_MODAL_TITLE = "Outputs";
 export const LANGFLOW_CHAT_TITLE = "Langflow Chat";
 export const CHAT_INPUT_PLACEHOLDER =
-  "No chat input variables found. Click to run your flow.";
+  "No chat input variables found. Click to run your bot.";
 export const CHAT_INPUT_PLACEHOLDER_SEND = "Send a message...";
 export const EDIT_CODE_TITLE = "Edit Code";
 export const MY_COLLECTION_DESC =
   "Manage your projects. Download and upload entire collections.";
-export const STORE_DESC = "Explore community-shared flows and components.";
+export const STORE_DESC = "Explore community-shared bots and components.";
 export const STORE_TITLE = "Botbusiness Store";
 export const NO_API_KEY = "You don't have an API key.";
 export const INSERT_API_KEY = "Insert your Langflow API key.";
@@ -985,7 +985,7 @@ export const COLOR_OPTIONS = {
 export const maxSizeFilesInBytes = 10 * 1024 * 1024; // 10MB in bytes
 export const MAX_TEXT_LENGTH = 99999;
 
-export const SEARCH_TABS = ["All", "Flows", "Components"];
+export const SEARCH_TABS = ["All", "Bots", "Components"];
 export const PAGINATION_SIZE = 12;
 export const PAGINATION_PAGE = 1;
 

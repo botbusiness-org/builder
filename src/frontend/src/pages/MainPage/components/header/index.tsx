@@ -86,7 +86,9 @@ const HeaderComponent = ({
                 } px-3 pb-2 text-sm`}
               >
                 <div className={flowType === type ? "-mb-px" : ""}>
-                  {type.charAt(0).toUpperCase() + type.slice(1)}
+                  {type === "flows"
+                    ? "Bots"
+                    : type.charAt(0).toUpperCase() + type.slice(1)}
                 </div>
               </Button>
             ))}
@@ -98,7 +100,7 @@ const HeaderComponent = ({
                 icon="Search"
                 data-testid="search-store-input"
                 type="text"
-                placeholder={`Search ${flowType}...`}
+                placeholder={`Search ${flowType === "flows" ? "bots" : flowType}...`}
                 className="mr-2"
                 value={debouncedSearch}
                 onChange={handleSearch}
@@ -135,7 +137,7 @@ const HeaderComponent = ({
                 ))}
               </div>
             </div>
-            <ShadTooltip content="New Flow" side="bottom">
+            <ShadTooltip content="New Bot" side="bottom">
               <Button
                 variant="default"
                 className="!px-3 md:!px-4 md:!pl-3.5"
@@ -149,7 +151,7 @@ const HeaderComponent = ({
                   className="h-4 w-4"
                 />
                 <span className="hidden whitespace-nowrap font-semibold md:inline">
-                  New Flow
+                  New Bot
                 </span>
               </Button>
             </ShadTooltip>

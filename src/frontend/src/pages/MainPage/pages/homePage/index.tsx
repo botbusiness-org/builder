@@ -134,12 +134,12 @@ const HomePage = ({ type }) => {
                     )
                   ) : flowType === "flows" ? (
                     <div className="pt-2 text-center text-sm text-secondary-foreground">
-                      No flows in this folder.{" "}
+                      No bots in this folder.{" "}
                       <a
                         onClick={() => setNewProjectModal(true)}
                         className="cursor-pointer underline"
                       >
-                        Create a new flow
+                        Create a new bot
                       </a>
                       , or browse the store.
                     </div>

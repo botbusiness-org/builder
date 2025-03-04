@@ -182,15 +182,14 @@ export default function ChatView({
                   className="h-10 w-10 scale-[1.5] dark:invert"
                 />
                 <div className="flex flex-col items-center justify-center">
-                  <h3 className="mt-2 pb-2 text-2xl font-semibold text-primary">
-                    New chat
-                  </h3>
                   <p
                     className="text-lg text-muted-foreground"
                     data-testid="new-chat-text"
                   >
                     <TextEffectPerChar>
-                      Test your flow with a chat prompt
+                      {inputTypes.includes("ChatInput")
+                        ? "Run this bot by typing a message"
+                        : "Press the button to run this bot"}
                     </TextEffectPerChar>
                   </p>
                 </div>

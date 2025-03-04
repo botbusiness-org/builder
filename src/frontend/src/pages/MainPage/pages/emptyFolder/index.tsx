@@ -31,7 +31,7 @@ export const EmptyFolder = ({ setOpenModal }: EmptyFolderProps) => {
             aria-hidden="true"
             className="h-4 w-4"
           />
-          <span className="whitespace-nowrap font-semibold">New Flow</span>
+          <span className="whitespace-nowrap font-semibold">New Bot</span>
         </Button>
       </div>
     </div>

@@ -74,7 +74,7 @@ export const EditFlowSettings: React.FC<InputProps> = ({
             type="text"
             name="name"
             value={name ?? ""}
-            placeholder="Flow name"
+            placeholder="Bot name"
             id="name"
             maxLength={maxLength}
             onDoubleClickCapture={(event) => {
@@ -100,7 +100,7 @@ export const EditFlowSettings: React.FC<InputProps> = ({
             id="description"
             onChange={handleDescriptionChange}
             value={description!}
-            placeholder="Flow description"
+            placeholder="Bot description"
             className="mt-2 max-h-[250px] resize-none font-normal"
             rows={5}
             onDoubleClickCapture={(event) => {

@@ -7,7 +7,7 @@ const PlaygroundButton = ({ hasIO, open, setOpen, canvasOpen }) => {
     <ForwardedIconComponent name="Play" className="h-4 w-4 transition-all" />
   );
 
-  const ButtonLabel = () => <span className="hidden md:block">Playground</span>;
+  const ButtonLabel = () => <span className="hidden md:block">Run Bot</span>;
 
   const ActiveButton = () => (
     <div
@@ -39,7 +39,7 @@ const PlaygroundButton = ({ hasIO, open, setOpen, canvasOpen }) => {
       <ActiveButton />
     </IOModal>
   ) : (
-    <ShadTooltip content="Add a Chat Input or Chat Output to use the playground">
+    <ShadTooltip content="Add a Chat Input or Chat Output to run this bot.">
       <div>
         <DisabledButton />
       </div>

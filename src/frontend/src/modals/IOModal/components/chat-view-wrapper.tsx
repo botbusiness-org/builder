@@ -50,7 +50,7 @@ export const ChatViewWrapper = ({
                 className="h-[18px] w-[18px] text-ring"
               />
             </Button>
-            <div className="font-semibold">Playground</div>
+            <div className="font-semibold">Run Bot</div>
           </div>
         </div>
         <div

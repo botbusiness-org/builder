@@ -177,7 +177,7 @@ export default function ChatInput({
                 });
               }}
             >
-              Run Flow
+              Run Bot
             </Button>
           ) : (
             <Button
@@ -192,18 +192,6 @@ export default function ChatInput({
               </div>
             </Button>
           )}
-
-          <p className="text-muted-foreground">
-            Add a{" "}
-            <a
-              className="underline underline-offset-4"
-              target="_blank"
-              href="https://docs.langflow.org/components-io#chat-input"
-            >
-              Chat Input
-            </a>{" "}
-            component to your flow to send messages.
-          </p>
         </div>
       </div>
     );

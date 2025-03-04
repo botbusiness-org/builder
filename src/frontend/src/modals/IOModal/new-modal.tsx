@@ -279,9 +279,7 @@ export default function IOModal({
                       />
                     </Button>
                   </ShadTooltip>
-                  {sidebarOpen && (
-                    <div className="font-semibold">Playground</div>
-                  )}
+                  {sidebarOpen && <div className="font-semibold">Run Bot</div>}
                 </div>
                 {sidebarOpen && (
                   <SidebarOpenView

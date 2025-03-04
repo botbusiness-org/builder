@@ -26,7 +26,7 @@ export function SaveChangesModal({
       onClose={onCancel}
       destructiveCancel
       title={
-        (autoSave ? "Flow" : truncate(flowName, { length: 32 })) +
+        (autoSave ? "Bot" : truncate(flowName, { length: 32 })) +
         " has unsaved changes"
       }
       cancelText={autoSave ? undefined : "Exit anyway"}

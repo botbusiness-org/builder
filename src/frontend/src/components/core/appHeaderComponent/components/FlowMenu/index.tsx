@@ -186,18 +186,18 @@ export const MenuBar = ({}: {}): JSX.Element => {
       setCurrentFlow(newFlow);
       saveFlow(newFlow)
         .then(() => {
-          setSuccessData({ title: "Flow name updated successfully" });
+          setSuccessData({ title: "Bot name updated successfully" });
         })
         .catch((error) => {
           setErrorData({
-            title: "Error updating flow name",
+            title: "Error updating bot name",
             list: [(error as Error).message],
           });
           setFlowName(currentFlow?.name ?? "");
         });
     } else if (isInvalidName) {
       setErrorData({
-        title: "Invalid flow name",
+        title: "Invalid bot name",
         list: ["Name already exists"],
       });
       setFlowName(currentFlow?.name ?? "");
