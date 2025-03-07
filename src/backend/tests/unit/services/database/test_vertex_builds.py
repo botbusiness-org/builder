@@ -74,7 +74,6 @@ async def create_test_builds(async_session: AsyncSession, count: int, flow_id, v
         await async_session.commit()  # Commit after each build to ensure limits are enforced
 
 
-@pytest.mark.asyncio
 async def test_log_vertex_build_basic(async_session: AsyncSession, vertex_build_data, mock_settings):
     """Test basic vertex build logging."""
     with patch("langflow.services.database.models.vertex_builds.crud.get_settings_service") as mock_settings_service:
@@ -88,7 +87,6 @@ async def test_log_vertex_build_basic(async_session: AsyncSession, vertex_build_
         assert result.build_id is not None  # Verify build_id was auto-generated
 
 
-@pytest.mark.asyncio
 async def test_log_vertex_build_max_global_limit(async_session: AsyncSession, vertex_build_data, mock_settings):
     """Test that global build limit is enforced."""
     with patch("langflow.services.database.models.vertex_builds.crud.get_settings_service") as mock_settings_service:
@@ -106,7 +104,6 @@ async def test_log_vertex_build_max_global_limit(async_session: AsyncSession, ve
         assert count <= mock_settings.max_vertex_builds_to_keep
 
 
-@pytest.mark.asyncio
 async def test_log_vertex_build_max_per_vertex_limit(async_session: AsyncSession, vertex_build_data, mock_settings):
     """Test that per-vertex build limit is enforced."""
     with patch("langflow.services.database.models.vertex_builds.crud.get_settings_service") as mock_settings_service:
@@ -132,7 +129,6 @@ async def test_log_vertex_build_max_per_vertex_limit(async_session: AsyncSession
         assert count <= mock_settings.max_vertex_builds_per_vertex
 
 
-@pytest.mark.asyncio
 async def test_log_vertex_build_integrity_error(async_session: AsyncSession, vertex_build_data, mock_settings):
     """Test handling of integrity errors."""
     with patch("langflow.services.database.models.vertex_builds.crud.get_settings_service") as mock_settings_service:
@@ -155,7 +151,6 @@ async def test_log_vertex_build_integrity_error(async_session: AsyncSession, ver
         assert second_build.build_id != first_build.build_id
 
 
-@pytest.mark.asyncio
 async def test_log_vertex_build_ordering(async_session: AsyncSession, timestamp_generator):
     """Test that oldest builds are deleted first."""
     max_builds = 5
@@ -196,7 +191,6 @@ async def test_log_vertex_build_ordering(async_session: AsyncSession, timestamp_
     assert all(remaining_builds[i] > remaining_builds[i + 1] for i in range(len(remaining_builds) - 1))
 
 
-@pytest.mark.asyncio
 @pytest.mark.parametrize(
     ("max_global", "max_per_vertex"),
     [
@@ -271,7 +265,6 @@ async def test_log_vertex_build_with_different_limits(
     assert vertex_count <= max_per_vertex
 
 
-@pytest.mark.asyncio
 async def test_concurrent_log_vertex_build(vertex_build_data, mock_settings):
     """Test concurrent build logging."""
     with patch("langflow.services.database.models.vertex_builds.crud.get_settings_service") as mock_settings_service:

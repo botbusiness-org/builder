@@ -6,10 +6,8 @@ from langflow.field_typing.constants import Data
 @pytest.fixture
 def component(
     client,  # noqa: ARG001
-    active_user,
 ):
     return CustomComponent(
-        user_id=active_user.id,
         field_config={
             "fields": {
                 "llm": {"type": "str"},

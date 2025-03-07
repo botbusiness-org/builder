@@ -145,7 +145,7 @@ unit_tests: ## run unit tests
 	@uv sync --frozen
 	@EXTRA_ARGS=""
 	@if [ "$(async)" = "true" ]; then \
-		EXTRA_ARGS="$$EXTRA_ARGS --instafail -n auto"; \
+		EXTRA_ARGS="$$EXTRA_ARGS --instafail -n auto --asyncio-mode=strict"; \
 	fi; \
 	if [ "$(lf)" = "true" ]; then \
 		EXTRA_ARGS="$$EXTRA_ARGS --lf"; \

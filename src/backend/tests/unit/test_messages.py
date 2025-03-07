@@ -102,6 +102,7 @@ async def test_aadd_messagetables(async_session):
 @pytest.mark.usefixtures("client")
 def test_delete_messages():
     session_id = "new_session_id"
+    delete_messages(session_id)
     message = Message(text="New Test message", sender="User", sender_name="User", session_id=session_id)
     add_messages([message])
     messages = get_messages(sender="User", session_id=session_id)
