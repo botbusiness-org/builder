@@ -1,6 +1,9 @@
 name: Ruff Style Check
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     types: [opened, synchronize, reopened, auto_merge_enabled]
     paths:

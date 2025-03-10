@@ -16,11 +16,11 @@ RUN cd /frontend && npm install && npm run build
 ################################
 FROM nginxinc/nginx-unprivileged:stable-bookworm-perl AS runtime
 
-LABEL org.opencontainers.image.title=langflow-frontend
-LABEL org.opencontainers.image.authors=['Langflow']
+LABEL org.opencontainers.image.title=botbusiness-builder-frontend
+LABEL org.opencontainers.image.authors=['Botbusiness.org']
 LABEL org.opencontainers.image.licenses=MIT
-LABEL org.opencontainers.image.url=https://github.com/langflow-ai/langflow
-LABEL org.opencontainers.image.source=https://github.com/langflow-ai/langflow
+LABEL org.opencontainers.image.url=https://github.com/botbusiness-org/builder
+LABEL org.opencontainers.image.source=https://github.com/botbusiness-org/builder
 
 COPY --from=builder-base --chown=nginx /frontend/build /usr/share/nginx/html
 COPY --chown=nginx ./docker/frontend/start-nginx.sh /start-nginx.sh

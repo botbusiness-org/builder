@@ -1,6 +1,13 @@
 name: Python tests
 
 on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, auto_merge_enabled]
+    paths:
+      - "src/backend"
   workflow_call:
     inputs:
       python-versions:

@@ -1,6 +1,13 @@
 name: Lint Frontend
 
 on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened, auto_merge_enabled]
+    paths:
+      - "src/frontend"
   workflow_call:
   workflow_dispatch:
     inputs:

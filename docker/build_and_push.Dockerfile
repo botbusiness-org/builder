@@ -79,11 +79,11 @@ COPY --from=builder --chown=1000 /app/.venv /app/.venv
 # Place executables in the environment at the front of the path
 ENV PATH="/app/.venv/bin:$PATH"
 
-LABEL org.opencontainers.image.title=langflow
-LABEL org.opencontainers.image.authors=['Langflow']
+LABEL org.opencontainers.image.title=botbusiness-builder
+LABEL org.opencontainers.image.authors=['Botbusiness.org']
 LABEL org.opencontainers.image.licenses=MIT
-LABEL org.opencontainers.image.url=https://github.com/langflow-ai/langflow
-LABEL org.opencontainers.image.source=https://github.com/langflow-ai/langflow
+LABEL org.opencontainers.image.url=https://github.com/botbusiness-org/builder
+LABEL org.opencontainers.image.source=https://github.com/botbusiness-org/builder
 
 USER user
 WORKDIR /app
