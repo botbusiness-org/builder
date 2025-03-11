@@ -65,7 +65,8 @@ jobs:
         with:
           ref: ${{ inputs.ref || inputs.main_version || github.ref }}
           persist-credentials: true
-
+      - name: "Setup Environment"
+        uses: ./.github/actions/setup-uv
       - name: Get Version to Tag
         if: ${{ inputs.main_version != '' }}
         id: get-version-input
