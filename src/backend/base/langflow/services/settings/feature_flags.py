@@ -5,6 +5,7 @@ class FeatureFlags(BaseSettings):
     mvp_components: bool = False
     user_signup: bool = False
     store: bool = False
+    admin_page: bool = False
 
     class Config:
         env_prefix = "LANGFLOW_FEATURE_"

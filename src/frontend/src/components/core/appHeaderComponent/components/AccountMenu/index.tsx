@@ -6,9 +6,9 @@ import { ENABLE_DATASTAX_LANGFLOW } from "@/customization/feature-flags";
 import { useCustomNavigate } from "@/customization/hooks/use-custom-navigate";
 import useAuthStore from "@/stores/authStore";
 import { useDarkStore } from "@/stores/darkStore";
+import { useUtilityStore } from "@/stores/utilityStore";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import GithubStarComponent from "../GithubStarButton";
 import {
   HeaderMenu,
   HeaderMenuItemButton,
@@ -31,6 +31,8 @@ export const AccountMenu = () => {
     isAdmin: state.isAdmin,
     autoLogin: state.autoLogin,
   }));
+
+  const featureFlags = useUtilityStore((state) => state.featureFlags);
 
   const handleLogout = () => {
     mutationLogout();
@@ -86,7 +88,7 @@ export const AccountMenu = () => {
             )}
             {!ENABLE_DATASTAX_LANGFLOW && (
               <>
-                {isAdmin && !autoLogin && (
+                {isAdmin && featureFlags?.admin_page && !autoLogin && (
                   <HeaderMenuItemButton onClick={() => navigate("/admin")}>
                     <span
                       data-testid="menu_admin_button"
