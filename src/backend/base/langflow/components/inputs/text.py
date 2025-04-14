@@ -5,7 +5,7 @@ from langflow.schema.message import Message
 
 class TextInputComponent(TextComponent):
     display_name = "Text Input"
-    description = "Get text inputs from the Playground."
+    description = "Get text inputs."
     icon = "type"
     name = "TextInput"
 

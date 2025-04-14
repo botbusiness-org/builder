@@ -53,7 +53,7 @@ export default function AppHeader(): JSX.Element {
     >
       {/* Left Section */}
       <div
-        className={`flex items-center gap-2`}
+        className={`z-30 flex items-center gap-2`}
         data-testid="header_left_section_wrapper"
       >
         <Button
@@ -73,13 +73,13 @@ export default function AppHeader(): JSX.Element {
       </div>
 
       {/* Middle Section */}
-      <div className="w-full flex-1 truncate md:max-w-[57%] lg:absolute lg:left-1/2 lg:max-w-[43%] lg:-translate-x-1/2 xl:max-w-[31%]">
+      <div className="w-full flex-1 truncate lg:absolute lg:left-1/2 lg:-translate-x-1/2">
         <FlowMenu />
       </div>
 
       {/* Right Section */}
       <div
-        className={`flex items-center gap-2`}
+        className={`z-30 flex items-center gap-2`}
         data-testid="header_right_section_wrapper"
       >
         <AlertDropdown
@@ -114,9 +114,7 @@ export default function AppHeader(): JSX.Element {
                   name="Bell"
                   className="side-bar-button-size h-[18px] w-[18px]"
                 />
-                <span className="hidden whitespace-nowrap 2xl:inline">
-                  Notifications
-                </span>
+                <span className="hidden whitespace-nowrap">Notifications</span>
               </Button>
             </AlertDropdown>
           </ShadTooltip>
@@ -124,13 +122,13 @@ export default function AppHeader(): JSX.Element {
         {!ENABLE_DATASTAX_LANGFLOW && featureFlags?.store && (
           <>
             <ShadTooltip
-              content="Go to LangflowStore"
+              content="Go to Langflow Store"
               side="bottom"
               styleClasses="z-10"
             >
               <Button
                 variant="ghost"
-                className={` ${lastPath === "store" ? "bg-accent text-accent-foreground" : ""}`}
+                className={` ${lastPath === "store" ? "bg-accent text-accent-foreground" : ""} z-50`}
                 onClick={() => {
                   navigate("/store");
                 }}
@@ -140,9 +138,7 @@ export default function AppHeader(): JSX.Element {
                   name="Store"
                   className="side-bar-button-size h-[18px] w-[18px]"
                 />
-                <span className="hidden whitespace-nowrap 2xl:inline">
-                  Store
-                </span>
+                <span className="hidden whitespace-nowrap">Store</span>
               </Button>
             </ShadTooltip>
             <Separator

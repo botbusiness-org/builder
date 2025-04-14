@@ -18,7 +18,7 @@ from langflow.utils.constants import (
 
 class ChatInput(ChatComponent):
     display_name = "Chat Input"
-    description = "Get chat inputs from the Playground."
+    description = "Get chat inputs."
     icon = "MessagesSquare"
     name = "ChatInput"
     minimized = True
@@ -66,6 +66,7 @@ class ChatInput(ChatComponent):
             info="Files to be sent with the message.",
             advanced=True,
             is_list=True,
+            temp_file=True,
         ),
         MessageTextInput(
             name="background_color",

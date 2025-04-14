@@ -5,7 +5,7 @@ from langflow.schema.message import Message
 
 class TextOutputComponent(TextComponent):
     display_name = "Text Output"
-    description = "Display a text output in the Playground."
+    description = "Display a text output."
     icon = "type"
     name = "TextOutput"
 

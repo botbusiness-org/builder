@@ -10,7 +10,7 @@ from langflow.components.models.botbusiness import BotbusinessAIModelComponent
 from langflow.components.models.google_generative_ai import GoogleGenerativeAIComponent
 from langflow.components.models.groq import GroqModel
 from langflow.components.models.nvidia import NVIDIAModelComponent
-from langflow.components.models.openai import OpenAIModelComponent
+from langflow.components.models.openai_chat_model import OpenAIModelComponent
 from langflow.components.models.sambanova import SambaNovaComponent
 from langflow.inputs.inputs import InputTypes, SecretStrInput
 from langflow.template.field.base import Input
@@ -21,6 +21,7 @@ class ModelProvidersDict(TypedDict):
     inputs: list[InputTypes]
     prefix: str
     component_class: LCModelComponent
+    icon: str
 
 
 def get_filtered_inputs(component_class):
@@ -94,7 +95,7 @@ def _get_botbusiness_ai_inputs_and_fields():
 
 def _get_openai_inputs_and_fields():
     try:
-        from langflow.components.models.openai import OpenAIModelComponent
+        from langflow.components.models.openai_chat_model import OpenAIModelComponent
 
         openai_inputs = get_filtered_inputs(OpenAIModelComponent)
     except ImportError as e:
@@ -185,6 +186,7 @@ try:
             "inputs": botbusiness_ai_inputs,
             "prefix": "",
             "component_class": BotbusinessAIModelComponent(),
+            "icon": BotbusinessAIModelComponent.icon,
         }
         if not DEFAULT_MODEL_PROVIDER:
             DEFAULT_MODEL_PROVIDER = "Botbusiness AI"
@@ -198,6 +200,7 @@ try:
         "inputs": openai_inputs,
         "prefix": "",
         "component_class": OpenAIModelComponent(),
+        "icon": OpenAIModelComponent.icon,
     }
     if not DEFAULT_MODEL_PROVIDER:
         DEFAULT_MODEL_PROVIDER = "OpenAI"
@@ -211,6 +214,7 @@ try:
         "inputs": azure_inputs,
         "prefix": "",
         "component_class": AzureChatOpenAIComponent(),
+        "icon": AzureChatOpenAIComponent.icon,
     }
     if not DEFAULT_MODEL_PROVIDER:
         DEFAULT_MODEL_PROVIDER = "Azure OpenAI"
@@ -224,6 +228,7 @@ try:
         "inputs": groq_inputs,
         "prefix": "",
         "component_class": GroqModel(),
+        "icon": GroqModel.icon,
     }
     if not DEFAULT_MODEL_PROVIDER:
         DEFAULT_MODEL_PROVIDER = "Groq"
@@ -237,6 +242,7 @@ try:
         "inputs": anthropic_inputs,
         "prefix": "",
         "component_class": AnthropicModelComponent(),
+        "icon": AnthropicModelComponent.icon,
     }
     if not DEFAULT_MODEL_PROVIDER:
         DEFAULT_MODEL_PROVIDER = "Anthropic"
@@ -250,6 +256,7 @@ try:
         "inputs": nvidia_inputs,
         "prefix": "",
         "component_class": NVIDIAModelComponent(),
+        "icon": NVIDIAModelComponent.icon,
     }
     if not DEFAULT_MODEL_PROVIDER:
         DEFAULT_MODEL_PROVIDER = "NVIDIA"
@@ -263,6 +270,7 @@ try:
         "inputs": bedrock_inputs,
         "prefix": "",
         "component_class": AmazonBedrockComponent(),
+        "icon": AmazonBedrockComponent.icon,
     }
     if not DEFAULT_MODEL_PROVIDER:
         DEFAULT_MODEL_PROVIDER = "Amazon Bedrock"
@@ -276,6 +284,7 @@ try:
         "inputs": google_generative_ai_inputs,
         "prefix": "",
         "component_class": GoogleGenerativeAIComponent(),
+        "icon": GoogleGenerativeAIComponent.icon,
     }
     if not DEFAULT_MODEL_PROVIDER:
         DEFAULT_MODEL_PROVIDER = "Google Generative AI"
@@ -289,6 +298,7 @@ try:
         "inputs": sambanova_inputs,
         "prefix": "",
         "component_class": SambaNovaComponent(),
+        "icon": SambaNovaComponent.icon,
     }
     if not DEFAULT_MODEL_PROVIDER:
         DEFAULT_MODEL_PROVIDER = "SambaNova"
@@ -299,3 +309,9 @@ MODEL_PROVIDERS = list(MODEL_PROVIDERS_DICT.keys())
 ALL_PROVIDER_FIELDS: list[str] = [field for provider in MODEL_PROVIDERS_DICT.values() for field in provider["fields"]]
 
 MODEL_DYNAMIC_UPDATE_FIELDS = ["api_key", "model", "tool_model_enabled", "base_url", "model_name"]
+
+
+MODELS_METADATA = {
+    key: {"icon": MODEL_PROVIDERS_DICT[key]["icon"] if key in MODEL_PROVIDERS_DICT else None}
+    for key in MODEL_PROVIDERS_DICT
+}
