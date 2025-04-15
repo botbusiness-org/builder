@@ -1,8 +1,6 @@
 name: Update OpenAPI Spec
 
 on:
-  schedule:
-    - cron: "0 20 * * 1" # Monday 4pm EST
   workflow_dispatch:     # Allow manual trigger
 
 permissions:
