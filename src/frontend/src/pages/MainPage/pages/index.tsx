@@ -55,33 +55,26 @@ export default function CollectionPage(): JSX.Element {
 
   return (
     <SidebarProvider width="280px">
-      {flows &&
-        examples &&
-        folders &&
-        (flows?.length !== examples?.length || folders?.length > 1) && (
-          <SideBarFoldersButtonsComponent
-            handleChangeFolder={(id: string) => {
-              navigate(`all/folder/${id}`);
-            }}
-            handleDeleteFolder={(item) => {
-              setFolderToEdit(item);
-              setOpenDeleteFolderModal(true);
-            }}
-            handleFilesClick={() => {
-              navigate("files");
-            }}
-          />
-        )}
+      {flows && examples && folders && (
+        <SideBarFoldersButtonsComponent
+          handleChangeFolder={(id: string) => {
+            navigate(`all/folder/${id}`);
+          }}
+          handleDeleteFolder={(item) => {
+            setFolderToEdit(item);
+            setOpenDeleteFolderModal(true);
+          }}
+          handleFilesClick={() => {
+            navigate("files");
+          }}
+        />
+      )}
       <main className="flex h-full w-full overflow-hidden">
         {flows && examples && folders ? (
           <div
             className={`relative mx-auto flex h-full w-full flex-col overflow-hidden`}
           >
-            {flows?.length !== examples?.length || folders?.length > 1 ? (
-              <Outlet />
-            ) : (
-              <EmptyPage setOpenModal={setOpenModal} />
-            )}
+            <Outlet />
           </div>
         ) : (
           <div className="flex h-full w-full items-center justify-center">
