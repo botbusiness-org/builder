@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import uuid
 from datetime import timedelta
+from enum import Enum
 from typing import TYPE_CHECKING, Annotated, Any
 
 from fastapi import Depends, HTTPException, Query
@@ -33,6 +34,12 @@ MIN_PAGE_SIZE = 1
 CurrentActiveUser = Annotated[User, Depends(get_current_active_user)]
 CurrentUserOptional = Annotated[User | None, Depends(get_current_user_optional)]
 DbSession = Annotated[AsyncSession, Depends(get_session)]
+
+
+class EventDeliveryType(str, Enum):
+    STREAMING = "streaming"
+    DIRECT = "direct"
+    POLLING = "polling"
 
 
 def has_api_terms(word: str):
