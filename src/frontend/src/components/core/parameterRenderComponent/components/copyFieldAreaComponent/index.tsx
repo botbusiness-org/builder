@@ -7,8 +7,8 @@ import IconComponent from "../../../../common/genericIconComponent";
 import { Input } from "../../../../ui/input";
 import { InputProps, TextAreaComponentType } from "../../types";
 
-const BACKEND_URL = "BACKEND_URL";
-const URL_WEBHOOK = `${window.location.protocol}//${window.location.host}/api/v1/webhook/`;
+const WEBHOOK_URL_PLACEHOLDER = "BACKEND_URL";
+const WEBSITE_URL_PLACEHOLDER = "WEBSITE_URL";
 
 const inputClasses = {
   base: ({ isFocused }: { isFocused: boolean }) =>
@@ -60,18 +60,21 @@ export default function CopyFieldAreaComponent({
   const [isFocused, setIsFocused] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
-  const isValueToReplace = value === BACKEND_URL;
+  const isWebhookValueToReplace = value === WEBHOOK_URL_PLACEHOLDER;
+  const isWebsiteValueToReplace = value === WEBSITE_URL_PLACEHOLDER;
   const setSuccessData = useAlertStore((state) => state.setSuccessData);
-  const currentFlow = useFlowStore((state) => state.currentFlow);
-  const endpointName = currentFlow?.endpoint_name ?? "";
+  const webhookUrl = useFlowStore((state) => state.webhookUrl);
+  const websiteUrl = useFlowStore((state) => state.websiteUrl);
 
   const valueToRender = useMemo(() => {
-    if (isValueToReplace) {
-      const urlWebhook = `${URL_WEBHOOK}${endpointName}`;
-      return isValueToReplace ? urlWebhook : value;
+    if (isWebhookValueToReplace && webhookUrl) {
+      return webhookUrl;
+    }
+    if (isWebsiteValueToReplace && websiteUrl) {
+      return websiteUrl;
     }
     return value;
-  }, [value, endpointName]);
+  }, [value, webhookUrl, websiteUrl]);
 
   const getInputClassName = () => {
     return cn(
@@ -91,7 +94,7 @@ export default function CopyFieldAreaComponent({
     navigator.clipboard.writeText(valueToRender);
 
     setSuccessData({
-      title: "Endpoint URL copied",
+      title: "Copied to clipboard",
     });
 
     event?.stopPropagation();

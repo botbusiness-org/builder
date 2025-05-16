@@ -1,0 +1,3365 @@
+{
+  "data": {
+    "edges": [
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "HTMLGenerator",
+            "id": "HTMLGenerator-Cx3qH",
+            "name": "html_output",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "WebsiteOutput-CXokO",
+            "inputTypes": [
+              "Data",
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__HTMLGenerator-Cx3qH{œdataTypeœ:œHTMLGeneratorœ,œidœ:œHTMLGenerator-Cx3qHœ,œnameœ:œhtml_outputœ,œoutput_typesœ:[œDataœ]}-WebsiteOutput-CXokO{œfieldNameœ:œinput_valueœ,œidœ:œWebsiteOutput-CXokOœ,œinputTypesœ:[œDataœ,œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "HTMLGenerator-Cx3qH",
+        "sourceHandle": "{œdataTypeœ: œHTMLGeneratorœ, œidœ: œHTMLGenerator-Cx3qHœ, œnameœ: œhtml_outputœ, œoutput_typesœ: [œDataœ]}",
+        "target": "WebsiteOutput-CXokO",
+        "targetHandle": "{œfieldNameœ: œinput_valueœ, œidœ: œWebsiteOutput-CXokOœ, œinputTypesœ: [œDataœ, œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "StructuredOutput",
+            "id": "StructuredOutput-0drHh",
+            "name": "structured_output",
+            "output_types": [
+              "Data"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "menu_pages",
+            "id": "HTMLGenerator-Cx3qH",
+            "inputTypes": [
+              "Data"
+            ],
+            "type": "table"
+          }
+        },
+        "id": "xy-edge__StructuredOutput-0drHh{œdataTypeœ:œStructuredOutputœ,œidœ:œStructuredOutput-0drHhœ,œnameœ:œstructured_outputœ,œoutput_typesœ:[œDataœ]}-HTMLGenerator-Cx3qH{œfieldNameœ:œmenu_pagesœ,œidœ:œHTMLGenerator-Cx3qHœ,œinputTypesœ:[œDataœ],œtypeœ:œtableœ}",
+        "selected": false,
+        "source": "StructuredOutput-0drHh",
+        "sourceHandle": "{œdataTypeœ: œStructuredOutputœ, œidœ: œStructuredOutput-0drHhœ, œnameœ: œstructured_outputœ, œoutput_typesœ: [œDataœ]}",
+        "target": "HTMLGenerator-Cx3qH",
+        "targetHandle": "{œfieldNameœ: œmenu_pagesœ, œidœ: œHTMLGenerator-Cx3qHœ, œinputTypesœ: [œDataœ], œtypeœ: œtableœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "BotbusinessAIModel",
+            "id": "BotbusinessAIModel-97naO",
+            "name": "model_output",
+            "output_types": [
+              "LanguageModel"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "llm",
+            "id": "StructuredOutput-0drHh",
+            "inputTypes": [
+              "LanguageModel"
+            ],
+            "type": "other"
+          }
+        },
+        "id": "xy-edge__BotbusinessAIModel-97naO{œdataTypeœ:œBotbusinessAIModelœ,œidœ:œBotbusinessAIModel-97naOœ,œnameœ:œmodel_outputœ,œoutput_typesœ:[œLanguageModelœ]}-StructuredOutput-0drHh{œfieldNameœ:œllmœ,œidœ:œStructuredOutput-0drHhœ,œinputTypesœ:[œLanguageModelœ],œtypeœ:œotherœ}",
+        "selected": false,
+        "source": "BotbusinessAIModel-97naO",
+        "sourceHandle": "{œdataTypeœ: œBotbusinessAIModelœ, œidœ: œBotbusinessAIModel-97naOœ, œnameœ: œmodel_outputœ, œoutput_typesœ: [œLanguageModelœ]}",
+        "target": "StructuredOutput-0drHh",
+        "targetHandle": "{œfieldNameœ: œllmœ, œidœ: œStructuredOutput-0drHhœ, œinputTypesœ: [œLanguageModelœ], œtypeœ: œotherœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt",
+            "id": "Prompt-z0WIu",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "StructuredOutput-0drHh",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt-z0WIu{œdataTypeœ:œPromptœ,œidœ:œPrompt-z0WIuœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-StructuredOutput-0drHh{œfieldNameœ:œinput_valueœ,œidœ:œStructuredOutput-0drHhœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt-z0WIu",
+        "sourceHandle": "{œdataTypeœ: œPromptœ, œidœ: œPrompt-z0WIuœ, œnameœ: œpromptœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "StructuredOutput-0drHh",
+        "targetHandle": "{œfieldNameœ: œinput_valueœ, œidœ: œStructuredOutput-0drHhœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "BotbusinessAIModel",
+            "id": "BotbusinessAIModel-ek83J",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "style",
+            "id": "HTMLGenerator-Cx3qH",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__BotbusinessAIModel-ek83J{œdataTypeœ:œBotbusinessAIModelœ,œidœ:œBotbusinessAIModel-ek83Jœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-HTMLGenerator-Cx3qH{œfieldNameœ:œstyleœ,œidœ:œHTMLGenerator-Cx3qHœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "BotbusinessAIModel-ek83J",
+        "sourceHandle": "{œdataTypeœ: œBotbusinessAIModelœ, œidœ: œBotbusinessAIModel-ek83Jœ, œnameœ: œtext_outputœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "HTMLGenerator-Cx3qH",
+        "targetHandle": "{œfieldNameœ: œstyleœ, œidœ: œHTMLGenerator-Cx3qHœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt",
+            "id": "Prompt-ai9Ee",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "BotbusinessAIModel-ek83J",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt-ai9Ee{œdataTypeœ:œPromptœ,œidœ:œPrompt-ai9Eeœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-BotbusinessAIModel-ek83J{œfieldNameœ:œinput_valueœ,œidœ:œBotbusinessAIModel-ek83Jœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt-ai9Ee",
+        "sourceHandle": "{œdataTypeœ: œPromptœ, œidœ: œPrompt-ai9Eeœ, œnameœ: œpromptœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "BotbusinessAIModel-ek83J",
+        "targetHandle": "{œfieldNameœ: œinput_valueœ, œidœ: œBotbusinessAIModel-ek83Jœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "BotbusinessAIModel",
+            "id": "BotbusinessAIModel-7kASd",
+            "name": "text_output",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "content",
+            "id": "HTMLGenerator-Cx3qH",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__BotbusinessAIModel-7kASd{œdataTypeœ:œBotbusinessAIModelœ,œidœ:œBotbusinessAIModel-7kASdœ,œnameœ:œtext_outputœ,œoutput_typesœ:[œMessageœ]}-HTMLGenerator-Cx3qH{œfieldNameœ:œcontentœ,œidœ:œHTMLGenerator-Cx3qHœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "BotbusinessAIModel-7kASd",
+        "sourceHandle": "{œdataTypeœ: œBotbusinessAIModelœ, œidœ: œBotbusinessAIModel-7kASdœ, œnameœ: œtext_outputœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "HTMLGenerator-Cx3qH",
+        "targetHandle": "{œfieldNameœ: œcontentœ, œidœ: œHTMLGenerator-Cx3qHœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt",
+            "id": "Prompt-j9hXD",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "input_value",
+            "id": "BotbusinessAIModel-7kASd",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt-j9hXD{œdataTypeœ:œPromptœ,œidœ:œPrompt-j9hXDœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-BotbusinessAIModel-7kASd{œfieldNameœ:œinput_valueœ,œidœ:œBotbusinessAIModel-7kASdœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt-j9hXD",
+        "sourceHandle": "{œdataTypeœ: œPromptœ, œidœ: œPrompt-j9hXDœ, œnameœ: œpromptœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "BotbusinessAIModel-7kASd",
+        "targetHandle": "{œfieldNameœ: œinput_valueœ, œidœ: œBotbusinessAIModel-7kASdœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "WebsiteInput",
+            "id": "WebsiteInput-P75N9",
+            "name": "output_path",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "path",
+            "id": "Prompt-j9hXD",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__WebsiteInput-P75N9{œdataTypeœ:œWebsiteInputœ,œidœ:œWebsiteInput-P75N9œ,œnameœ:œoutput_pathœ,œoutput_typesœ:[œMessageœ]}-Prompt-j9hXD{œfieldNameœ:œpathœ,œidœ:œPrompt-j9hXDœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "WebsiteInput-P75N9",
+        "sourceHandle": "{œdataTypeœ: œWebsiteInputœ, œidœ: œWebsiteInput-P75N9œ, œnameœ: œoutput_pathœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "Prompt-j9hXD",
+        "targetHandle": "{œfieldNameœ: œpathœ, œidœ: œPrompt-j9hXDœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt",
+            "id": "Prompt-tgndz",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "intro",
+            "id": "Prompt-j9hXD",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt-tgndz{œdataTypeœ:œPromptœ,œidœ:œPrompt-tgndzœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-Prompt-j9hXD{œfieldNameœ:œintroœ,œidœ:œPrompt-j9hXDœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt-tgndz",
+        "sourceHandle": "{œdataTypeœ: œPromptœ, œidœ: œPrompt-tgndzœ, œnameœ: œpromptœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "Prompt-j9hXD",
+        "targetHandle": "{œfieldNameœ: œintroœ, œidœ: œPrompt-j9hXDœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt",
+            "id": "Prompt-tgndz",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "intro",
+            "id": "Prompt-z0WIu",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt-tgndz{œdataTypeœ:œPromptœ,œidœ:œPrompt-tgndzœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-Prompt-z0WIu{œfieldNameœ:œintroœ,œidœ:œPrompt-z0WIuœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt-tgndz",
+        "sourceHandle": "{œdataTypeœ: œPromptœ, œidœ: œPrompt-tgndzœ, œnameœ: œpromptœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "Prompt-z0WIu",
+        "targetHandle": "{œfieldNameœ: œintroœ, œidœ: œPrompt-z0WIuœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "Prompt",
+            "id": "Prompt-tgndz",
+            "name": "prompt",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "intro",
+            "id": "Prompt-ai9Ee",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__Prompt-tgndz{œdataTypeœ:œPromptœ,œidœ:œPrompt-tgndzœ,œnameœ:œpromptœ,œoutput_typesœ:[œMessageœ]}-Prompt-ai9Ee{œfieldNameœ:œintroœ,œidœ:œPrompt-ai9Eeœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "Prompt-tgndz",
+        "sourceHandle": "{œdataTypeœ: œPromptœ, œidœ: œPrompt-tgndzœ, œnameœ: œpromptœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "Prompt-ai9Ee",
+        "targetHandle": "{œfieldNameœ: œintroœ, œidœ: œPrompt-ai9Eeœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "TextInput",
+            "id": "TextInput-4gfor",
+            "name": "text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "business_description",
+            "id": "Prompt-tgndz",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__TextInput-4gfor{œdataTypeœ:œTextInputœ,œidœ:œTextInput-4gforœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-Prompt-tgndz{œfieldNameœ:œbusiness_descriptionœ,œidœ:œPrompt-tgndzœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "TextInput-4gfor",
+        "sourceHandle": "{œdataTypeœ: œTextInputœ, œidœ: œTextInput-4gforœ, œnameœ: œtextœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "Prompt-tgndz",
+        "targetHandle": "{œfieldNameœ: œbusiness_descriptionœ, œidœ: œPrompt-tgndzœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      },
+      {
+        "animated": false,
+        "className": "",
+        "data": {
+          "sourceHandle": {
+            "dataType": "TextInput",
+            "id": "TextInput-6GgEn",
+            "name": "text",
+            "output_types": [
+              "Message"
+            ]
+          },
+          "targetHandle": {
+            "fieldName": "website_instructions",
+            "id": "Prompt-tgndz",
+            "inputTypes": [
+              "Message"
+            ],
+            "type": "str"
+          }
+        },
+        "id": "xy-edge__TextInput-6GgEn{œdataTypeœ:œTextInputœ,œidœ:œTextInput-6GgEnœ,œnameœ:œtextœ,œoutput_typesœ:[œMessageœ]}-Prompt-tgndz{œfieldNameœ:œwebsite_instructionsœ,œidœ:œPrompt-tgndzœ,œinputTypesœ:[œMessageœ],œtypeœ:œstrœ}",
+        "selected": false,
+        "source": "TextInput-6GgEn",
+        "sourceHandle": "{œdataTypeœ: œTextInputœ, œidœ: œTextInput-6GgEnœ, œnameœ: œtextœ, œoutput_typesœ: [œMessageœ]}",
+        "target": "Prompt-tgndz",
+        "targetHandle": "{œfieldNameœ: œwebsite_instructionsœ, œidœ: œPrompt-tgndzœ, œinputTypesœ: [œMessageœ], œtypeœ: œstrœ}"
+      }
+    ],
+    "nodes": [
+      {
+        "data": {
+          "id": "WebsiteOutput-CXokO",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Displays HTML code as web page.",
+            "display_name": "Website Output",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value"
+            ],
+            "frozen": false,
+            "icon": "file-code",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "HTML",
+                "method": "html_response",
+                "name": "html",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.io.text import TextComponent\nfrom langflow.io import MultilineInput, Output\nfrom langflow.schema.data import Data\nfrom langflow.schema.message import Message\n\n\nclass WebsiteOutputComponent(TextComponent):\n    display_name = \"Website Output\"\n    description = \"Displays HTML code as web page.\"\n    icon = \"file-code\"\n    name = \"WebsiteOutput\"\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"HTML\",\n            info=\"HTML to be passed as output.\",\n            input_types=[\"Data\", \"Message\"],\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"HTML\", name=\"html\", method=\"html_response\"),\n    ]\n\n    def html_response(self) -> Data:\n        if isinstance(self.input_value, str):\n            html = self.input_value\n        elif isinstance(self.input_value, Message):\n            html = self.input_value.get_text()\n        elif isinstance(self.input_value, Data):\n            if self.input_value.get_text() is None:\n                msg = \"Empty Data object\"\n                raise ValueError(msg)\n            html = self.input_value.get_text()\n        else:\n            html = str(self.input_value)\n        return Data(data={\"html\": html}, text_key=\"html\")\n"
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "HTML",
+                "dynamic": false,
+                "info": "HTML to be passed as output.",
+                "input_types": [
+                  "Data",
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "WebsiteOutput"
+        },
+        "dragging": false,
+        "id": "WebsiteOutput-CXokO",
+        "measured": {
+          "height": 230,
+          "width": 320
+        },
+        "position": {
+          "x": 820.9999999999999,
+          "y": 430.4
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "HTMLGenerator-Cx3qH",
+          "node": {
+            "base_classes": [
+              "Data"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate HTML pages with customizable styling.",
+            "display_name": "HTML Generator",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "title",
+              "content",
+              "menu_pages",
+              "header_content",
+              "sidebar_content",
+              "footer_content",
+              "style",
+              "use_markdown",
+              "template",
+              "meta_description",
+              "meta_keywords",
+              "rewrite_root_links"
+            ],
+            "frozen": false,
+            "icon": "code",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "HTML",
+                "method": "generate_html",
+                "name": "html_output",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\n\nimport markdown\nfrom jinja2 import Template\n\nfrom langflow.custom import Component\nfrom langflow.io import (\n    BoolInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n    TableInput,\n)\nfrom langflow.schema import Data\n\nTEMPLATE = \"\"\"<!DOCTYPE html>\n<html lang=\\\"en\\\">\n<head>\n    <meta charset=\\\"UTF-8\\\">\n    <meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\">\n    {{ meta_tags }}\n    <title>{{ title }}</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n            line-height: 1.6;\n        }\n        .container {\n            {% if sidebar_content %}\n            display: grid;\n            grid-template-columns: 1fr 220px;\n            gap: 2rem;\n            {% endif %}\n            max-width: 900px;\n            margin: 40px auto;\n            padding: 0 2.5rem;\n        }\n        {% if sidebar_content %}\n        main {\n            grid-column: 1;\n        }\n        aside {\n            grid-column: 2;\n            padding: 1.2rem 1rem;\n            min-height: 140px;\n        }\n        {% endif %}\n        @media (max-width: 900px) {\n            .container {\n                grid-template-columns: 1fr;\n                gap: 1.2rem;\n                padding: 0 1.2rem;\n            }\n            aside {\n                grid-column: 1;\n                margin-top: 2rem;\n            }\n        }\n        nav {\n            margin-bottom: 2rem;\n        }\n        nav ul#main-menu {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 1rem;\n            align-items: center;\n            list-style: none;\n            padding: 0.5rem;\n            margin: 0;\n        }\n        nav ul#main-menu li a {\n            text-decoration: none;\n            font-weight: 500;\n            padding: 0.5rem 1rem;\n            transition: background 0.2s;\n        }\n        .menu-toggle {\n            display: none;\n            background: none;\n            border: none;\n            font-size: 2rem;\n            cursor: pointer;\n        }\n        @media (max-width: 600px) {\n            nav ul#main-menu {\n                display: none;\n                flex-direction: column;\n                width: 100%;\n                position: absolute;\n                left: 0;\n                top: 60px;\n                z-index: 10;\n            }\n            nav ul#main-menu.open {\n                display: flex;\n                background: inherit;\n            }\n            .menu-toggle {\n                display: block;\n            }\n        }\n        footer {\n            margin-top: 2rem;\n        }\n        .content {\n            margin-top: 1.8rem;\n        }\n        {{ custom_style }}\n    </style>\n    <script>\n        function toggleMenu() {\n            var menu = document.getElementById('main-menu');\n            if (menu.classList.contains('open')) {\n                menu.classList.remove('open');\n            } else {\n                menu.classList.add('open');\n            }\n        }\n    </script>\n</head>\n<body>\n    {% if header_content %}\n    <header>\n        {{ header_content }}\n    </header>\n    {% endif %}\n    <nav>\n        <button class=\\\"menu-toggle\\\" onclick=\\\"toggleMenu()\\\">&#9776;</button>\n        <ul id=\\\"main-menu\\\">\n            {% for page in menu_pages %}\n                <li><a href=\\\"{{ page.url }}\\\">{{ page.title }}</a></li>\n            {% endfor %}\n        </ul>\n    </nav>\n    <div class=\\\"container\\\">\n        <main class=\\\"content\\\">\n            {{ content }}\n        </main>\n        {% if sidebar_content %}\n        <aside>\n            {{ sidebar_content }}\n        </aside>\n        {% endif %}\n    </div>\n    {% if footer_content %}\n    <footer>\n        {{ footer_content }}\n    </footer>\n    {% endif %}\n</body>\n</html>\"\"\"\n\n\nclass HTMLGeneratorComponent(Component):\n    display_name = \"HTML Generator\"\n    description = \"Generate HTML pages with customizable styling.\"\n    icon = \"code\"\n    name = \"HTMLGenerator\"\n\n    inputs = [\n        MessageTextInput(\n            name=\"title\",\n            display_name=\"Page Title\",\n            info=\"The title of the HTML page\",\n            required=True,\n        ),\n        MultilineInput(\n            name=\"content\",\n            display_name=\"Content\",\n            info=\"The main content of the page (supports Markdown if enabled)\",\n            required=True,\n        ),\n        TableInput(\n            name=\"menu_pages\",\n            display_name=\"Menu\",\n            info=\"List of pages for the navigation menu.\",\n            table_schema=[\n                {\n                    \"name\": \"title\",\n                    \"display_name\": \"Title\",\n                    \"type\": \"str\",\n                    \"description\": \"Page title\",\n                },\n                {\n                    \"name\": \"url\",\n                    \"display_name\": \"URL\",\n                    \"description\": \"Page URL\",\n                },\n            ],\n            value=[],\n            input_types=[\"Data\"],\n        ),\n        MultilineInput(\n            name=\"header_content\",\n            display_name=\"Header Content\",\n            info=\"HTML or Markdown for the header (optional).\",\n            value=\"\",\n        ),\n        MultilineInput(\n            name=\"sidebar_content\",\n            display_name=\"Sidebar Content\",\n            info=\"HTML or Markdown for the sidebar (optional).\",\n            value=\"\",\n        ),\n        MultilineInput(\n            name=\"footer_content\",\n            display_name=\"Footer Content\",\n            info=\"HTML or Markdown for the footer (optional).\",\n            value=\"\",\n        ),\n        MultilineInput(\n            name=\"style\",\n            display_name=\"CSS Style\",\n            info=\"Add CSS styles for the page\",\n            value=\"\",\n        ),\n        BoolInput(\n            name=\"use_markdown\",\n            display_name=\"Use Markdown\",\n            info=\"Convert content from Markdown to HTML\",\n            value=True,\n        ),\n        MultilineInput(\n            name=\"template\",\n            display_name=\"HTML Template\",\n            info=\"Jinja2 template for the HTML page.\",\n            value=TEMPLATE,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"meta_description\",\n            display_name=\"Meta Description\",\n            info=\"SEO meta description\",\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"meta_keywords\",\n            display_name=\"Meta Keywords\",\n            info=\"SEO meta keywords (comma-separated)\",\n            advanced=True,\n        ),\n        BoolInput(\n            name=\"rewrite_root_links\",\n            display_name=\"Rewrite root links\",\n            info=\"Rewrites links starting with / to be relative to the current page\",\n            value=True,\n            advanced=True,\n        ),\n    ]\n\n    outputs = [\n        Output(name=\"html_output\", display_name=\"HTML\", method=\"generate_html\"),\n    ]\n\n    def build_meta_tags(self) -> str:\n        \"\"\"Build meta tags for SEO.\"\"\"\n        meta_tags = []\n        if self.meta_description:\n            meta_tags.append(f'<meta name=\"description\" content=\"{self.meta_description}\">')\n        if self.meta_keywords:\n            meta_tags.append(f'<meta name=\"keywords\" content=\"{self.meta_keywords}\">')\n        return \"\\n    \".join(meta_tags)\n\n    def build_menu_pages(self) -> list:\n        \"\"\"Build the menu pages for the navigation.\"\"\"\n        menu_pages = self.menu_pages or []\n\n        if isinstance(self.menu_pages, Data):\n            menu_pages = json.loads(self.menu_pages.get_text())\n        elif hasattr(self.menu_pages, \"__iter__\"):\n            menu_pages = [json.loads(page.get_text()) if isinstance(page, Data) else page for page in self.menu_pages]\n        menu_pages = menu_pages[0] if len(menu_pages) == 1 else menu_pages\n\n        if self.rewrite_root_links:\n            for page in menu_pages:\n                if isinstance(page, dict) and page.get(\"url\", \"\").startswith(\"/\"):\n                    page[\"url\"] = f\".{page['url']}\"\n\n        return menu_pages\n\n    def sanitize_content(self, content: str) -> str:\n        \"\"\"Fix common LLM output issues with the content.\"\"\"\n        content = content.replace(\"```markdown\", \"\").replace(\"```\", \"\")\n        if self.rewrite_root_links:\n            content = content.replace('href=\"/', 'href=\"./')\n        return content\n\n    def process_content(self, content: str) -> str:\n        \"\"\"Process the content based on the use_markdown flag.\"\"\"\n        if self.use_markdown:\n            content = markdown.markdown(content)\n        return self.sanitize_content(content)\n\n    def generate_html(self) -> Data:\n        \"\"\"Generate the HTML page based on the inputs.\"\"\"\n        try:\n            content = self.process_content(self.content or \"\")\n            header_content = self.process_content(self.header_content or \"\")\n            sidebar_content = self.process_content(self.sidebar_content or \"\")\n            footer_content = self.process_content(self.footer_content or \"\")\n            meta_tags = self.build_meta_tags()\n            menu_pages = self.build_menu_pages()\n            style = (self.style or \"\").replace(\"```css\", \"\").replace(\"```\", \"\")\n            template = self.template or TEMPLATE\n\n            html = Template(template).render(\n                title=self.title,\n                meta_tags=meta_tags,\n                custom_style=style,\n                menu_pages=menu_pages or [],\n                content=content,\n                header_content=header_content,\n                sidebar_content=sidebar_content,\n                footer_content=footer_content,\n            )\n\n            self.status = f\"Generated HTML page: {self.title}\"\n            return Data(data={\"html\": html}, text_key=\"html\")\n\n        except Exception as e:\n            error_msg = f\"Error generating HTML: {e}\"\n            self.status = error_msg\n            raise ValueError(error_msg) from e\n"
+              },
+              "content": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Content",
+                "dynamic": false,
+                "info": "The main content of the page (supports Markdown if enabled)",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "content",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "footer_content": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Footer Content",
+                "dynamic": false,
+                "info": "HTML or Markdown for the footer (optional).",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "footer_content",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "header_content": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Header Content",
+                "dynamic": false,
+                "info": "HTML or Markdown for the header (optional).",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "header_content",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "menu_pages": {
+                "_input_type": "TableInput",
+                "advanced": false,
+                "display_name": "Menu",
+                "dynamic": false,
+                "info": "List of pages for the navigation menu.",
+                "input_types": [
+                  "Data"
+                ],
+                "is_list": true,
+                "list_add_label": "Add More",
+                "name": "menu_pages",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "table_icon": "Table",
+                "table_schema": {
+                  "columns": [
+                    {
+                      "default": "None",
+                      "description": "Page title",
+                      "disable_edit": false,
+                      "display_name": "Title",
+                      "edit_mode": "popover",
+                      "filterable": true,
+                      "formatter": "text",
+                      "hidden": false,
+                      "name": "title",
+                      "sortable": true,
+                      "type": "str"
+                    },
+                    {
+                      "default": "None",
+                      "description": "Page URL",
+                      "disable_edit": false,
+                      "display_name": "URL",
+                      "edit_mode": "popover",
+                      "filterable": true,
+                      "formatter": "text",
+                      "hidden": false,
+                      "name": "url",
+                      "sortable": true
+                    }
+                  ]
+                },
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "trigger_icon": "Table",
+                "trigger_text": "Open table",
+                "type": "table",
+                "value": []
+              },
+              "meta_description": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Meta Description",
+                "dynamic": false,
+                "info": "SEO meta description",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "meta_description",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "meta_keywords": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Meta Keywords",
+                "dynamic": false,
+                "info": "SEO meta keywords (comma-separated)",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "meta_keywords",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "rewrite_root_links": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Rewrite root links",
+                "dynamic": false,
+                "info": "Rewrites links starting with / to be relative to the current page",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "rewrite_root_links",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "sidebar_content": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Sidebar Content",
+                "dynamic": false,
+                "info": "HTML or Markdown for the sidebar (optional).",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "sidebar_content",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "style": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "CSS Style",
+                "dynamic": false,
+                "info": "Add CSS styles for the page",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "style",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "template": {
+                "_input_type": "MultilineInput",
+                "advanced": true,
+                "copy_field": false,
+                "display_name": "HTML Template",
+                "dynamic": false,
+                "info": "Jinja2 template for the HTML page.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    {{ meta_tags }}\n    <title>{{ title }}</title>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n            line-height: 1.6;\n        }\n        .container {\n            {% if sidebar_content %}\n            display: grid;\n            grid-template-columns: 1fr 220px;\n            gap: 2rem;\n            {% endif %}\n            max-width: 900px;\n            margin: 40px auto;\n            padding: 0 2.5rem;\n        }\n        {% if sidebar_content %}\n        main {\n            grid-column: 1;\n        }\n        aside {\n            grid-column: 2;\n            padding: 1.2rem 1rem;\n            min-height: 140px;\n        }\n        {% endif %}\n        @media (max-width: 900px) {\n            .container {\n                grid-template-columns: 1fr;\n                gap: 1.2rem;\n                padding: 0 1.2rem;\n            }\n            aside {\n                grid-column: 1;\n                margin-top: 2rem;\n            }\n        }\n        nav {\n            margin-bottom: 2rem;\n        }\n        nav ul#main-menu {\n            display: flex;\n            flex-wrap: wrap;\n            gap: 1rem;\n            align-items: center;\n            list-style: none;\n            padding: 0.5rem;\n            margin: 0;\n        }\n        nav ul#main-menu li a {\n            text-decoration: none;\n            font-weight: 500;\n            padding: 0.5rem 1rem;\n            transition: background 0.2s;\n        }\n        .menu-toggle {\n            display: none;\n            background: none;\n            border: none;\n            font-size: 2rem;\n            cursor: pointer;\n        }\n        @media (max-width: 600px) {\n            nav ul#main-menu {\n                display: none;\n                flex-direction: column;\n                width: 100%;\n                position: absolute;\n                left: 0;\n                top: 60px;\n                z-index: 10;\n            }\n            nav ul#main-menu.open {\n                display: flex;\n                background: inherit;\n            }\n            .menu-toggle {\n                display: block;\n            }\n        }\n        footer {\n            margin-top: 2rem;\n        }\n        .content {\n            margin-top: 1.8rem;\n        }\n        {{ custom_style }}\n    </style>\n    <script>\n        function toggleMenu() {\n            var menu = document.getElementById('main-menu');\n            if (menu.classList.contains('open')) {\n                menu.classList.remove('open');\n            } else {\n                menu.classList.add('open');\n            }\n        }\n    </script>\n</head>\n<body>\n    {% if header_content %}\n    <header>\n        {{ header_content }}\n    </header>\n    {% endif %}\n    <nav>\n        <button class=\"menu-toggle\" onclick=\"toggleMenu()\">&#9776;</button>\n        <ul id=\"main-menu\">\n            {% for page in menu_pages %}\n                <li><a href=\"{{ page.url }}\">{{ page.title }}</a></li>\n            {% endfor %}\n        </ul>\n    </nav>\n    <div class=\"container\">\n        <main class=\"content\">\n            {{ content }}\n        </main>\n        {% if sidebar_content %}\n        <aside>\n            {{ sidebar_content }}\n        </aside>\n        {% endif %}\n    </div>\n    {% if footer_content %}\n    <footer>\n        {{ footer_content }}\n    </footer>\n    {% endif %}\n</body>\n</html>"
+              },
+              "title": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Page Title",
+                "dynamic": false,
+                "info": "The title of the HTML page",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "title",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "use_markdown": {
+                "_input_type": "BoolInput",
+                "advanced": false,
+                "display_name": "Use Markdown",
+                "dynamic": false,
+                "info": "Convert content from Markdown to HTML",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "use_markdown",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "HTMLGenerator"
+        },
+        "dragging": false,
+        "id": "HTMLGenerator-Cx3qH",
+        "measured": {
+          "height": 789,
+          "width": 320
+        },
+        "position": {
+          "x": 317.8799999999999,
+          "y": 124.90000000000012
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "StructuredOutput-0drHh",
+          "node": {
+            "base_classes": [
+              "Data",
+              "DataFrame"
+            ],
+            "beta": false,
+            "category": "helpers",
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Transforms LLM responses into **structured data formats**. Ideal for extracting specific information or creating consistent outputs.",
+            "display_name": "Structured Output",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "llm",
+              "input_value",
+              "system_prompt",
+              "schema_name",
+              "output_schema",
+              "multiple"
+            ],
+            "frozen": false,
+            "icon": "braces",
+            "key": "StructuredOutput",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Structured Output",
+                "method": "build_structured_output",
+                "name": "structured_output",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "DataFrame",
+                "method": "as_dataframe",
+                "name": "structured_output_dataframe",
+                "selected": "DataFrame",
+                "tool_mode": true,
+                "types": [
+                  "DataFrame"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "score": 0.007568328950209746,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from pydantic import BaseModel, Field, create_model\nfrom trustcall import create_extractor\n\nfrom langflow.base.models.chat_result import get_chat_result\nfrom langflow.custom import Component\nfrom langflow.helpers.base_model import build_model_from_schema\nfrom langflow.io import (\n    BoolInput,\n    HandleInput,\n    MessageTextInput,\n    MultilineInput,\n    Output,\n    TableInput,\n)\nfrom langflow.schema.data import Data\nfrom langflow.schema.dataframe import DataFrame\nfrom langflow.schema.table import EditMode\n\n\nclass StructuredOutputComponent(Component):\n    display_name = \"Structured Output\"\n    description = (\n        \"Transforms LLM responses into **structured data formats**. Ideal for extracting specific information \"\n        \"or creating consistent outputs.\"\n    )\n    name = \"StructuredOutput\"\n    icon = \"braces\"\n\n    inputs = [\n        HandleInput(\n            name=\"llm\",\n            display_name=\"Language Model\",\n            info=\"The language model to use to generate the structured output.\",\n            input_types=[\"LanguageModel\"],\n            required=True,\n        ),\n        MessageTextInput(\n            name=\"input_value\",\n            display_name=\"Input Message\",\n            info=\"The input message to the language model.\",\n            tool_mode=True,\n            required=True,\n        ),\n        MultilineInput(\n            name=\"system_prompt\",\n            display_name=\"Format Instructions\",\n            info=\"The instructions to the language model for formatting the output.\",\n            value=(\n                \"You are an AI system designed to extract structured information from unstructured text.\"\n                \"Given the input_text, return a JSON object with predefined keys based on the expected structure.\"\n                \"Extract values accurately and format them according to the specified type \"\n                \"(e.g., string, integer, float, date).\"\n                \"If a value is missing or cannot be determined, return a default \"\n                \"(e.g., null, 0, or 'N/A').\"\n                \"If multiple instances of the expected structure exist within the input_text, \"\n                \"stream each as a separate JSON object.\"\n            ),\n            required=True,\n            advanced=True,\n        ),\n        MessageTextInput(\n            name=\"schema_name\",\n            display_name=\"Schema Name\",\n            info=\"Provide a name for the output data schema.\",\n            advanced=True,\n        ),\n        TableInput(\n            name=\"output_schema\",\n            display_name=\"Output Schema\",\n            info=\"Define the structure and data types for the model's output.\",\n            required=True,\n            # TODO: remove deault value\n            table_schema=[\n                {\n                    \"name\": \"name\",\n                    \"display_name\": \"Name\",\n                    \"type\": \"str\",\n                    \"description\": \"Specify the name of the output field.\",\n                    \"default\": \"field\",\n                    \"edit_mode\": EditMode.INLINE,\n                },\n                {\n                    \"name\": \"description\",\n                    \"display_name\": \"Description\",\n                    \"type\": \"str\",\n                    \"description\": \"Describe the purpose of the output field.\",\n                    \"default\": \"description of field\",\n                    \"edit_mode\": EditMode.POPOVER,\n                },\n                {\n                    \"name\": \"type\",\n                    \"display_name\": \"Type\",\n                    \"type\": \"str\",\n                    \"edit_mode\": EditMode.INLINE,\n                    \"description\": (\n                        \"Indicate the data type of the output field (e.g., str, int, float, bool, list, dict).\"\n                    ),\n                    \"options\": [\"str\", \"int\", \"float\", \"bool\", \"list\", \"dict\"],\n                    \"default\": \"str\",\n                },\n                {\n                    \"name\": \"multiple\",\n                    \"display_name\": \"Multiple\",\n                    \"type\": \"boolean\",\n                    \"description\": \"Set to True if this output field should be a list of the specified type.\",\n                    \"default\": \"False\",\n                    \"edit_mode\": EditMode.INLINE,\n                },\n            ],\n            value=[\n                {\n                    \"name\": \"field\",\n                    \"description\": \"description of field\",\n                    \"type\": \"str\",\n                    \"multiple\": \"False\",\n                }\n            ],\n        ),\n        BoolInput(\n            name=\"multiple\",\n            advanced=True,\n            display_name=\"Generate Multiple\",\n            info=\"[Deplrecated] Always set to True\",\n            value=True,\n        ),\n    ]\n\n    outputs = [\n        Output(\n            name=\"structured_output\",\n            display_name=\"Structured Output\",\n            method=\"build_structured_output\",\n        ),\n        Output(\n            name=\"structured_output_dataframe\",\n            display_name=\"DataFrame\",\n            method=\"as_dataframe\",\n        ),\n    ]\n\n    def build_structured_output_base(self) -> Data:\n        schema_name = self.schema_name or \"OutputModel\"\n\n        if not hasattr(self.llm, \"with_structured_output\"):\n            msg = \"Language model does not support structured output.\"\n            raise TypeError(msg)\n        if not self.output_schema:\n            msg = \"Output schema cannot be empty\"\n            raise ValueError(msg)\n\n        output_model_ = build_model_from_schema(self.output_schema)\n\n        output_model = create_model(\n            schema_name,\n            __doc__=f\"A list of {schema_name}.\",\n            objects=(list[output_model_], Field(description=f\"A list of {schema_name}.\")),  # type: ignore[valid-type]\n        )\n\n        try:\n            llm_with_structured_output = create_extractor(self.llm, tools=[output_model])\n        except NotImplementedError as exc:\n            msg = f\"{self.llm.__class__.__name__} does not support structured output.\"\n            raise TypeError(msg) from exc\n        config_dict = {\n            \"run_name\": self.display_name,\n            \"project_name\": self.get_project_name(),\n            \"callbacks\": self.get_langchain_callbacks(),\n        }\n        result = get_chat_result(\n            runnable=llm_with_structured_output,\n            system_message=self.system_prompt,\n            input_value=self.input_value,\n            config=config_dict,\n        )\n        if isinstance(result, BaseModel):\n            result = result.model_dump()\n        if responses := result.get(\"responses\"):\n            result = responses[0].model_dump()\n        if messages := result.get(\"messages\"):\n            message = messages[0].model_dump()\n            result = message.get(\"content\").replace(\"```json\", \"\").replace(\"```\", \"\")\n        if result and \"objects\" in result:\n            return result[\"objects\"]\n\n        return result\n\n    def build_structured_output(self) -> Data:\n        output = self.build_structured_output_base()\n\n        return Data(text_key=\"results\", data={\"results\": output})\n\n    def as_dataframe(self) -> DataFrame:\n        output = self.build_structured_output_base()\n        if isinstance(output, list):\n            return DataFrame(data=output)\n        return DataFrame(data=[output])\n"
+              },
+              "input_value": {
+                "_input_type": "MessageTextInput",
+                "advanced": false,
+                "display_name": "Input Message",
+                "dynamic": false,
+                "info": "The input message to the language model.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "llm": {
+                "_input_type": "HandleInput",
+                "advanced": false,
+                "display_name": "Language Model",
+                "dynamic": false,
+                "info": "The language model to use to generate the structured output.",
+                "input_types": [
+                  "LanguageModel"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "llm",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "multiple": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Generate Multiple",
+                "dynamic": false,
+                "info": "[Deplrecated] Always set to True",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "multiple",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "output_schema": {
+                "_input_type": "TableInput",
+                "advanced": false,
+                "display_name": "Output Schema",
+                "dynamic": false,
+                "info": "Define the structure and data types for the model's output.",
+                "is_list": true,
+                "list_add_label": "Add More",
+                "name": "output_schema",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "table_icon": "Table",
+                "table_schema": {
+                  "columns": [
+                    {
+                      "default": "field",
+                      "description": "Specify the name of the output field.",
+                      "disable_edit": false,
+                      "display_name": "Name",
+                      "edit_mode": "inline",
+                      "filterable": true,
+                      "formatter": "text",
+                      "hidden": false,
+                      "name": "name",
+                      "sortable": true,
+                      "type": "str"
+                    },
+                    {
+                      "default": "description of field",
+                      "description": "Describe the purpose of the output field.",
+                      "disable_edit": false,
+                      "display_name": "Description",
+                      "edit_mode": "popover",
+                      "filterable": true,
+                      "formatter": "text",
+                      "hidden": false,
+                      "name": "description",
+                      "sortable": true,
+                      "type": "str"
+                    },
+                    {
+                      "default": "str",
+                      "description": "Indicate the data type of the output field (e.g., str, int, float, bool, list, dict).",
+                      "disable_edit": false,
+                      "display_name": "Type",
+                      "edit_mode": "inline",
+                      "filterable": true,
+                      "formatter": "text",
+                      "hidden": false,
+                      "name": "type",
+                      "options": [
+                        "str",
+                        "int",
+                        "float",
+                        "bool",
+                        "list",
+                        "dict"
+                      ],
+                      "sortable": true,
+                      "type": "str"
+                    },
+                    {
+                      "default": false,
+                      "description": "Set to True if this output field should be a list of the specified type.",
+                      "disable_edit": false,
+                      "display_name": "Multiple",
+                      "edit_mode": "inline",
+                      "filterable": true,
+                      "formatter": "boolean",
+                      "hidden": false,
+                      "name": "multiple",
+                      "sortable": true,
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "trigger_icon": "Table",
+                "trigger_text": "Open table",
+                "type": "table",
+                "value": [
+                  {
+                    "description": "Page Title",
+                    "multiple": "False",
+                    "name": "title",
+                    "type": "str"
+                  },
+                  {
+                    "description": "URL slug (only the last part of the URL)",
+                    "multiple": false,
+                    "name": "url",
+                    "type": "str"
+                  }
+                ]
+              },
+              "schema_name": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Schema Name",
+                "dynamic": false,
+                "info": "Provide a name for the output data schema.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "schema_name",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "system_prompt": {
+                "_input_type": "MultilineInput",
+                "advanced": true,
+                "copy_field": false,
+                "display_name": "Format Instructions",
+                "dynamic": false,
+                "info": "The instructions to the language model for formatting the output.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_prompt",
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "You are an AI system designed to extract structured information from unstructured text.Given the input_text, return a JSON object with predefined keys based on the expected structure.Extract values accurately and format them according to the specified type (e.g., string, integer, float, date).If a value is missing or cannot be determined, return a default (e.g., null, 0, or 'N/A').If multiple instances of the expected structure exist within the input_text, stream each as a separate JSON object."
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "StructuredOutput"
+        },
+        "dragging": false,
+        "id": "StructuredOutput-0drHh",
+        "measured": {
+          "height": 447,
+          "width": 320
+        },
+        "position": {
+          "x": -501.47999999999996,
+          "y": 268.90000000000015
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "BotbusinessAIModel-97naO",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate text using LLMs provided by Botbusiness.",
+            "display_name": "Botbusiness AI",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "system_message",
+              "stream",
+              "max_tokens",
+              "model_kwargs",
+              "json_mode",
+              "output_schema",
+              "model_name",
+              "temperature",
+              "seed",
+              "output_parser"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Message",
+                "method": "text_response",
+                "name": "text_output",
+                "required_inputs": [],
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "method": "build_model",
+                "name": "model_output",
+                "required_inputs": [],
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import operator\nimport os\nfrom functools import reduce\n\nfrom langflow.base.models import LCModelComponent, PatchedChatModel\nfrom langflow.field_typing import LanguageModel\nfrom langflow.field_typing.range_spec import RangeSpec\nfrom langflow.inputs import BoolInput, DictInput, DropdownInput, FloatInput, IntInput\nfrom langflow.inputs.inputs import HandleInput\n\n\nclass BotbusinessAIModelComponent(LCModelComponent):\n    display_name = \"Botbusiness AI\"\n    description = \"Generate text using LLMs provided by Botbusiness.\"\n    icon = \"MessagesSquare\"\n    name = \"BotbusinessAIModel\"\n    model_names = os.getenv(\"BOTBUSINESS_AI_MODEL_NAMES\", \"\").split(\",\")\n\n    inputs = [\n        *LCModelComponent._base_inputs,\n        IntInput(\n            name=\"max_tokens\",\n            display_name=\"Max Tokens\",\n            advanced=True,\n            info=\"The maximum number of tokens to generate. Set to 0 for unlimited tokens.\",\n            range_spec=RangeSpec(min=0, max=128000),\n        ),\n        DictInput(name=\"model_kwargs\", display_name=\"Model Kwargs\", advanced=True),\n        BoolInput(\n            name=\"json_mode\",\n            display_name=\"JSON Mode\",\n            advanced=True,\n            info=\"If True, it will output JSON regardless of passing a schema.\",\n        ),\n        DictInput(\n            name=\"output_schema\",\n            is_list=True,\n            display_name=\"Schema\",\n            advanced=True,\n            info=\"The schema for the Output of the model. \"\n            \"You must pass the word JSON in the prompt. \"\n            \"If left blank, JSON mode will be disabled. [DEPRECATED]\",\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            advanced=False,\n            options=model_names,\n            value=model_names[0] if model_names else None,\n        ),\n        FloatInput(name=\"temperature\", display_name=\"Temperature\", value=0.1),\n        IntInput(\n            name=\"seed\",\n            display_name=\"Seed\",\n            info=\"The seed controls the reproducibility of the job.\",\n            advanced=True,\n            value=1,\n        ),\n        HandleInput(\n            name=\"output_parser\",\n            display_name=\"Output Parser\",\n            info=\"The parser to use to parse the output of the model\",\n            advanced=True,\n            input_types=[\"OutputParser\"],\n        ),\n    ]\n\n    def build_model(self) -> LanguageModel:  # type: ignore[type-var]\n        # self.output_schema is a list of dictionaries\n        # let's convert it to a dictionary\n        output_schema_dict: dict[str, str] = reduce(operator.ior, self.output_schema or {}, {})\n        temperature = self.temperature\n        model_name: str = self.model_name\n        max_tokens = self.max_tokens\n        model_kwargs = self.model_kwargs or {}\n        json_mode = bool(output_schema_dict) or self.json_mode\n        seed = self.seed\n\n        botbusiness_ai_api_key = os.getenv(\"BOTBUSINESS_AI_TOKEN\")\n        if not botbusiness_ai_api_key:\n            msg = \"BOTBUSINESS_AI_TOKEN is not set.\"\n            raise ValueError(msg)\n\n        botbusiness_ai_api_base = os.getenv(\"BOTBUSINESS_AI_URL\")\n        if not botbusiness_ai_api_base:\n            msg = \"BOTBUSINESS_AI_URL is not set.\"\n            raise ValueError(msg)\n\n        output = PatchedChatModel(\n            max_tokens=max_tokens or None,\n            model_kwargs=model_kwargs,\n            model=model_name,\n            base_url=botbusiness_ai_api_base,\n            api_key=botbusiness_ai_api_key,\n            temperature=temperature if temperature is not None else 0.1,\n            seed=seed,\n        )\n        if json_mode:\n            if output_schema_dict:\n                output = output.with_structured_output(schema=output_schema_dict, method=\"json_mode\")\n            else:\n                output = output.bind(response_format={\"type\": \"json_object\"})\n\n        return output\n\n    def _get_exception_message(self, e):\n        if e.body and isinstance(e.body, dict):\n            message = e.body.get(\"message\")\n            if message:\n                return message\n        return str(e)\n"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "json_mode": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "JSON Mode",
+                "dynamic": false,
+                "info": "If True, it will output JSON regardless of passing a schema.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "json_mode",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "max_tokens": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Max Tokens",
+                "dynamic": false,
+                "info": "The maximum number of tokens to generate. Set to 0 for unlimited tokens.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_tokens",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 128000,
+                  "min": 0,
+                  "step": 0.1,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "model_kwargs": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "display_name": "Model Kwargs",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "model_kwargs",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model Name",
+                "dynamic": false,
+                "info": "",
+                "name": "model_name",
+                "options": [
+                  "mistral24b",
+                  "reasoning",
+                  "llama3",
+                  "granite"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "mistral24b"
+              },
+              "output_parser": {
+                "_input_type": "HandleInput",
+                "advanced": true,
+                "display_name": "Output Parser",
+                "dynamic": false,
+                "info": "The parser to use to parse the output of the model",
+                "input_types": [
+                  "OutputParser"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "output_parser",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "output_schema": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "display_name": "Schema",
+                "dynamic": false,
+                "info": "The schema for the Output of the model. You must pass the word JSON in the prompt. If left blank, JSON mode will be disabled. [DEPRECATED]",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "output_schema",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "seed": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Seed",
+                "dynamic": false,
+                "info": "The seed controls the reproducibility of the job.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "seed",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 1
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "System message to pass to the model.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "temperature": {
+                "_input_type": "FloatInput",
+                "advanced": false,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "temperature",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": 0.5
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "BotbusinessAIModel"
+        },
+        "dragging": false,
+        "id": "BotbusinessAIModel-97naO",
+        "measured": {
+          "height": 380,
+          "width": 320
+        },
+        "position": {
+          "x": -937.8,
+          "y": 176.74000000000024
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt-z0WIu",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "intro"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt",
+            "documentation": "",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template",
+              "tool_placeholder"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "prompts",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt Message",
+                "method": "build_prompt",
+                "name": "prompt",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": null,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    icon = \"prompts\"\n    trace_type = \"prompt\"\n    name = \"Prompt\"\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt Message\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "intro": {
+                "advanced": false,
+                "display_name": "intro",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "intro",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "template": {
+                "_input_type": "PromptInput",
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "{intro}\n\nPlease describe the main menu (i.e. the main navigation items) of the website.\nWhich pages should be displayed there and what is the corresponding link?\nOnly output pages on the first level, not in subdirectories.\n\nPlease output \"title\" and \"url\" for each menu item.\n"
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Prompt"
+        },
+        "dragging": false,
+        "id": "Prompt-z0WIu",
+        "measured": {
+          "height": 412,
+          "width": 320
+        },
+        "position": {
+          "x": -936.3599999999998,
+          "y": 614.5000000000001
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "BotbusinessAIModel-ek83J",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate text using LLMs provided by Botbusiness.",
+            "display_name": "Botbusiness AI",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "system_message",
+              "stream",
+              "max_tokens",
+              "model_kwargs",
+              "json_mode",
+              "output_schema",
+              "model_name",
+              "temperature",
+              "seed",
+              "output_parser"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Message",
+                "method": "text_response",
+                "name": "text_output",
+                "required_inputs": [],
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "method": "build_model",
+                "name": "model_output",
+                "required_inputs": [],
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import operator\nimport os\nfrom functools import reduce\n\nfrom langflow.base.models import LCModelComponent, PatchedChatModel\nfrom langflow.field_typing import LanguageModel\nfrom langflow.field_typing.range_spec import RangeSpec\nfrom langflow.inputs import BoolInput, DictInput, DropdownInput, FloatInput, IntInput\nfrom langflow.inputs.inputs import HandleInput\n\n\nclass BotbusinessAIModelComponent(LCModelComponent):\n    display_name = \"Botbusiness AI\"\n    description = \"Generate text using LLMs provided by Botbusiness.\"\n    icon = \"MessagesSquare\"\n    name = \"BotbusinessAIModel\"\n    model_names = os.getenv(\"BOTBUSINESS_AI_MODEL_NAMES\", \"\").split(\",\")\n\n    inputs = [\n        *LCModelComponent._base_inputs,\n        IntInput(\n            name=\"max_tokens\",\n            display_name=\"Max Tokens\",\n            advanced=True,\n            info=\"The maximum number of tokens to generate. Set to 0 for unlimited tokens.\",\n            range_spec=RangeSpec(min=0, max=128000),\n        ),\n        DictInput(name=\"model_kwargs\", display_name=\"Model Kwargs\", advanced=True),\n        BoolInput(\n            name=\"json_mode\",\n            display_name=\"JSON Mode\",\n            advanced=True,\n            info=\"If True, it will output JSON regardless of passing a schema.\",\n        ),\n        DictInput(\n            name=\"output_schema\",\n            is_list=True,\n            display_name=\"Schema\",\n            advanced=True,\n            info=\"The schema for the Output of the model. \"\n            \"You must pass the word JSON in the prompt. \"\n            \"If left blank, JSON mode will be disabled. [DEPRECATED]\",\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            advanced=False,\n            options=model_names,\n            value=model_names[0] if model_names else None,\n        ),\n        FloatInput(name=\"temperature\", display_name=\"Temperature\", value=0.1),\n        IntInput(\n            name=\"seed\",\n            display_name=\"Seed\",\n            info=\"The seed controls the reproducibility of the job.\",\n            advanced=True,\n            value=1,\n        ),\n        HandleInput(\n            name=\"output_parser\",\n            display_name=\"Output Parser\",\n            info=\"The parser to use to parse the output of the model\",\n            advanced=True,\n            input_types=[\"OutputParser\"],\n        ),\n    ]\n\n    def build_model(self) -> LanguageModel:  # type: ignore[type-var]\n        # self.output_schema is a list of dictionaries\n        # let's convert it to a dictionary\n        output_schema_dict: dict[str, str] = reduce(operator.ior, self.output_schema or {}, {})\n        temperature = self.temperature\n        model_name: str = self.model_name\n        max_tokens = self.max_tokens\n        model_kwargs = self.model_kwargs or {}\n        json_mode = bool(output_schema_dict) or self.json_mode\n        seed = self.seed\n\n        botbusiness_ai_api_key = os.getenv(\"BOTBUSINESS_AI_TOKEN\")\n        if not botbusiness_ai_api_key:\n            msg = \"BOTBUSINESS_AI_TOKEN is not set.\"\n            raise ValueError(msg)\n\n        botbusiness_ai_api_base = os.getenv(\"BOTBUSINESS_AI_URL\")\n        if not botbusiness_ai_api_base:\n            msg = \"BOTBUSINESS_AI_URL is not set.\"\n            raise ValueError(msg)\n\n        output = PatchedChatModel(\n            max_tokens=max_tokens or None,\n            model_kwargs=model_kwargs,\n            model=model_name,\n            base_url=botbusiness_ai_api_base,\n            api_key=botbusiness_ai_api_key,\n            temperature=temperature if temperature is not None else 0.1,\n            seed=seed,\n        )\n        if json_mode:\n            if output_schema_dict:\n                output = output.with_structured_output(schema=output_schema_dict, method=\"json_mode\")\n            else:\n                output = output.bind(response_format={\"type\": \"json_object\"})\n\n        return output\n\n    def _get_exception_message(self, e):\n        if e.body and isinstance(e.body, dict):\n            message = e.body.get(\"message\")\n            if message:\n                return message\n        return str(e)\n"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "json_mode": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "JSON Mode",
+                "dynamic": false,
+                "info": "If True, it will output JSON regardless of passing a schema.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "json_mode",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "max_tokens": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Max Tokens",
+                "dynamic": false,
+                "info": "The maximum number of tokens to generate. Set to 0 for unlimited tokens.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_tokens",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 128000,
+                  "min": 0,
+                  "step": 0.1,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "model_kwargs": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "display_name": "Model Kwargs",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "model_kwargs",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model Name",
+                "dynamic": false,
+                "info": "",
+                "name": "model_name",
+                "options": [
+                  "mistral24b",
+                  "reasoning",
+                  "llama3",
+                  "granite"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "mistral24b"
+              },
+              "output_parser": {
+                "_input_type": "HandleInput",
+                "advanced": true,
+                "display_name": "Output Parser",
+                "dynamic": false,
+                "info": "The parser to use to parse the output of the model",
+                "input_types": [
+                  "OutputParser"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "output_parser",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "output_schema": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "display_name": "Schema",
+                "dynamic": false,
+                "info": "The schema for the Output of the model. You must pass the word JSON in the prompt. If left blank, JSON mode will be disabled. [DEPRECATED]",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "output_schema",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "seed": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Seed",
+                "dynamic": false,
+                "info": "The seed controls the reproducibility of the job.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "seed",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 1
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "System message to pass to the model.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "temperature": {
+                "_input_type": "FloatInput",
+                "advanced": false,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "temperature",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": 0.5
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "BotbusinessAIModel"
+        },
+        "dragging": false,
+        "id": "BotbusinessAIModel-ek83J",
+        "measured": {
+          "height": 463,
+          "width": 320
+        },
+        "position": {
+          "x": -498.8595716815684,
+          "y": 1124.0171030928673
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt-ai9Ee",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "intro"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt",
+            "documentation": "",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template",
+              "tool_placeholder"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "prompts",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt Message",
+                "method": "build_prompt",
+                "name": "prompt",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": null,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    icon = \"prompts\"\n    trace_type = \"prompt\"\n    name = \"Prompt\"\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt Message\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "intro": {
+                "advanced": false,
+                "display_name": "intro",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "intro",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "template": {
+                "_input_type": "PromptInput",
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "{intro}\n\nPlease design the CSS of the website to match the style of the business.\nPlease output only the CSS code, without further markup, without tags and without text.\n"
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Prompt"
+        },
+        "dragging": false,
+        "id": "Prompt-ai9Ee",
+        "measured": {
+          "height": 412,
+          "width": 320
+        },
+        "position": {
+          "x": -935.3120345540874,
+          "y": 1162.0301372220692
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "BotbusinessAIModel-7kASd",
+          "node": {
+            "base_classes": [
+              "LanguageModel",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Generate text using LLMs provided by Botbusiness.",
+            "display_name": "Botbusiness AI",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value",
+              "system_message",
+              "stream",
+              "max_tokens",
+              "model_kwargs",
+              "json_mode",
+              "output_schema",
+              "model_name",
+              "temperature",
+              "seed",
+              "output_parser"
+            ],
+            "frozen": false,
+            "icon": "MessagesSquare",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Message",
+                "method": "text_response",
+                "name": "text_output",
+                "required_inputs": [],
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Language Model",
+                "method": "build_model",
+                "name": "model_output",
+                "required_inputs": [],
+                "selected": "LanguageModel",
+                "tool_mode": true,
+                "types": [
+                  "LanguageModel"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import operator\nimport os\nfrom functools import reduce\n\nfrom langflow.base.models import LCModelComponent, PatchedChatModel\nfrom langflow.field_typing import LanguageModel\nfrom langflow.field_typing.range_spec import RangeSpec\nfrom langflow.inputs import BoolInput, DictInput, DropdownInput, FloatInput, IntInput\nfrom langflow.inputs.inputs import HandleInput\n\n\nclass BotbusinessAIModelComponent(LCModelComponent):\n    display_name = \"Botbusiness AI\"\n    description = \"Generate text using LLMs provided by Botbusiness.\"\n    icon = \"MessagesSquare\"\n    name = \"BotbusinessAIModel\"\n    model_names = os.getenv(\"BOTBUSINESS_AI_MODEL_NAMES\", \"\").split(\",\")\n\n    inputs = [\n        *LCModelComponent._base_inputs,\n        IntInput(\n            name=\"max_tokens\",\n            display_name=\"Max Tokens\",\n            advanced=True,\n            info=\"The maximum number of tokens to generate. Set to 0 for unlimited tokens.\",\n            range_spec=RangeSpec(min=0, max=128000),\n        ),\n        DictInput(name=\"model_kwargs\", display_name=\"Model Kwargs\", advanced=True),\n        BoolInput(\n            name=\"json_mode\",\n            display_name=\"JSON Mode\",\n            advanced=True,\n            info=\"If True, it will output JSON regardless of passing a schema.\",\n        ),\n        DictInput(\n            name=\"output_schema\",\n            is_list=True,\n            display_name=\"Schema\",\n            advanced=True,\n            info=\"The schema for the Output of the model. \"\n            \"You must pass the word JSON in the prompt. \"\n            \"If left blank, JSON mode will be disabled. [DEPRECATED]\",\n        ),\n        DropdownInput(\n            name=\"model_name\",\n            display_name=\"Model Name\",\n            advanced=False,\n            options=model_names,\n            value=model_names[0] if model_names else None,\n        ),\n        FloatInput(name=\"temperature\", display_name=\"Temperature\", value=0.1),\n        IntInput(\n            name=\"seed\",\n            display_name=\"Seed\",\n            info=\"The seed controls the reproducibility of the job.\",\n            advanced=True,\n            value=1,\n        ),\n        HandleInput(\n            name=\"output_parser\",\n            display_name=\"Output Parser\",\n            info=\"The parser to use to parse the output of the model\",\n            advanced=True,\n            input_types=[\"OutputParser\"],\n        ),\n    ]\n\n    def build_model(self) -> LanguageModel:  # type: ignore[type-var]\n        # self.output_schema is a list of dictionaries\n        # let's convert it to a dictionary\n        output_schema_dict: dict[str, str] = reduce(operator.ior, self.output_schema or {}, {})\n        temperature = self.temperature\n        model_name: str = self.model_name\n        max_tokens = self.max_tokens\n        model_kwargs = self.model_kwargs or {}\n        json_mode = bool(output_schema_dict) or self.json_mode\n        seed = self.seed\n\n        botbusiness_ai_api_key = os.getenv(\"BOTBUSINESS_AI_TOKEN\")\n        if not botbusiness_ai_api_key:\n            msg = \"BOTBUSINESS_AI_TOKEN is not set.\"\n            raise ValueError(msg)\n\n        botbusiness_ai_api_base = os.getenv(\"BOTBUSINESS_AI_URL\")\n        if not botbusiness_ai_api_base:\n            msg = \"BOTBUSINESS_AI_URL is not set.\"\n            raise ValueError(msg)\n\n        output = PatchedChatModel(\n            max_tokens=max_tokens or None,\n            model_kwargs=model_kwargs,\n            model=model_name,\n            base_url=botbusiness_ai_api_base,\n            api_key=botbusiness_ai_api_key,\n            temperature=temperature if temperature is not None else 0.1,\n            seed=seed,\n        )\n        if json_mode:\n            if output_schema_dict:\n                output = output.with_structured_output(schema=output_schema_dict, method=\"json_mode\")\n            else:\n                output = output.bind(response_format={\"type\": \"json_object\"})\n\n        return output\n\n    def _get_exception_message(self, e):\n        if e.body and isinstance(e.body, dict):\n            message = e.body.get(\"message\")\n            if message:\n                return message\n        return str(e)\n"
+              },
+              "input_value": {
+                "_input_type": "MessageInput",
+                "advanced": false,
+                "display_name": "Input",
+                "dynamic": false,
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "json_mode": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "JSON Mode",
+                "dynamic": false,
+                "info": "If True, it will output JSON regardless of passing a schema.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "json_mode",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "max_tokens": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Max Tokens",
+                "dynamic": false,
+                "info": "The maximum number of tokens to generate. Set to 0 for unlimited tokens.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "max_tokens",
+                "placeholder": "",
+                "range_spec": {
+                  "max": 128000,
+                  "min": 0,
+                  "step": 0.1,
+                  "step_type": "float"
+                },
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": ""
+              },
+              "model_kwargs": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "display_name": "Model Kwargs",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "model_kwargs",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "model_name": {
+                "_input_type": "DropdownInput",
+                "advanced": false,
+                "combobox": false,
+                "dialog_inputs": {},
+                "display_name": "Model Name",
+                "dynamic": false,
+                "info": "",
+                "name": "model_name",
+                "options": [
+                  "mistral24b",
+                  "reasoning",
+                  "llama3",
+                  "granite"
+                ],
+                "options_metadata": [],
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "toggle": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "mistral24b"
+              },
+              "output_parser": {
+                "_input_type": "HandleInput",
+                "advanced": true,
+                "display_name": "Output Parser",
+                "dynamic": false,
+                "info": "The parser to use to parse the output of the model",
+                "input_types": [
+                  "OutputParser"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "output_parser",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "trace_as_metadata": true,
+                "type": "other",
+                "value": ""
+              },
+              "output_schema": {
+                "_input_type": "DictInput",
+                "advanced": true,
+                "display_name": "Schema",
+                "dynamic": false,
+                "info": "The schema for the Output of the model. You must pass the word JSON in the prompt. If left blank, JSON mode will be disabled. [DEPRECATED]",
+                "list": true,
+                "list_add_label": "Add More",
+                "name": "output_schema",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "dict",
+                "value": {}
+              },
+              "seed": {
+                "_input_type": "IntInput",
+                "advanced": true,
+                "display_name": "Seed",
+                "dynamic": false,
+                "info": "The seed controls the reproducibility of the job.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "seed",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "int",
+                "value": 1
+              },
+              "stream": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Stream",
+                "dynamic": false,
+                "info": "Stream the response from the model. Streaming works only in Chat.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "stream",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": false
+              },
+              "system_message": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "System Message",
+                "dynamic": false,
+                "info": "System message to pass to the model.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "system_message",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "temperature": {
+                "_input_type": "FloatInput",
+                "advanced": false,
+                "display_name": "Temperature",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "temperature",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "float",
+                "value": 0.5
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "BotbusinessAIModel"
+        },
+        "dragging": false,
+        "id": "BotbusinessAIModel-7kASd",
+        "measured": {
+          "height": 463,
+          "width": 320
+        },
+        "position": {
+          "x": -499.7486711936098,
+          "y": -538.5493663780803
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt-j9hXD",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "intro",
+                "path"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt",
+            "documentation": "",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template",
+              "tool_placeholder"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "prompts",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt Message",
+                "method": "build_prompt",
+                "name": "prompt",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": null,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    icon = \"prompts\"\n    trace_type = \"prompt\"\n    name = \"Prompt\"\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt Message\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "intro": {
+                "advanced": false,
+                "display_name": "intro",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "intro",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "path": {
+                "advanced": false,
+                "display_name": "path",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "path",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "template": {
+                "_input_type": "PromptInput",
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "{intro}\n\nPlease create the content for the following website path in Markdown format: {path}\nPlease only output the Markdown content of this page, no further notes or additional texts.\n"
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Prompt"
+        },
+        "dragging": false,
+        "id": "Prompt-j9hXD",
+        "measured": {
+          "height": 495,
+          "width": 320
+        },
+        "position": {
+          "x": -933.5257705971966,
+          "y": -563.070114818213
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "WebsiteInput-P75N9",
+          "node": {
+            "base_classes": [
+              "Data",
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Entry point for a website. It receives the path and parameters from the request.",
+            "display_name": "Website Input",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "path",
+              "data",
+              "url",
+              "use_store",
+              "page_store",
+              "require_link"
+            ],
+            "frozen": false,
+            "icon": "tablet-smartphone",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Path",
+                "method": "build_path",
+                "name": "output_path",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              },
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Parameters",
+                "method": "build_data",
+                "name": "output_data",
+                "selected": "Data",
+                "tool_mode": true,
+                "types": [
+                  "Data"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "import json\n\nfrom langflow.custom import Component\nfrom langflow.io import BoolInput, MultilineInput, Output, TableInput\nfrom langflow.schema import Data, Message\n\n\nclass WebsiteInputComponent(Component):\n    display_name = \"Website Input\"\n    name = \"WebsiteInput\"\n    icon = \"tablet-smartphone\"\n    description = \"Entry point for a website. It receives the path and parameters from the request.\"\n\n    inputs = [\n        MultilineInput(\n            name=\"path\",\n            display_name=\"Path\",\n            info=\"Receives the path of the current page.\",\n            value=\"/\",\n            advanced=True,\n        ),\n        MultilineInput(\n            name=\"data\",\n            display_name=\"Parameters\",\n            info=\"Receives HTTP GET or POST parameters.\",\n            advanced=True,\n        ),\n        MultilineInput(\n            name=\"url\",\n            display_name=\"URL\",\n            value=\"WEBSITE_URL\",\n            advanced=False,\n            copy_field=True,\n            input_types=[],\n        ),\n        BoolInput(\n            name=\"use_store\",\n            display_name=\"Use Page Store\",\n            info=\"If enabled, generated pages will be stored to speed up future requests.\",\n            value=True,\n        ),\n        TableInput(\n            name=\"page_store\",\n            display_name=\"Page Store\",\n            info=(\n                \"Contains stored pages. Pages in the store will not be generated again to make requests faster. \"\n                \"Delete a page from the store to regenerate it.\"\n            ),\n            table_schema=[\n                {\n                    \"name\": \"path\",\n                    \"display_name\": \"Path\",\n                    \"type\": \"str\",\n                    \"description\": \"Page path\",\n                },\n                {\n                    \"name\": \"content\",\n                    \"display_name\": \"Content\",\n                    \"type\": \"str\",\n                    \"description\": \"Page content\",\n                },\n            ],\n            value=[],\n            input_types=[\"Data\"],\n        ),\n        BoolInput(\n            name=\"require_link\",\n            display_name=\"Allow linked pages only\",\n            info=(\n                'If enabled, only the home page (\"/\") and all pages that are linked on any generated page will be '\n                \"accessible. This is useful to prevent users from generating arbitrary pages. Requires the store to be \"\n                \"enabled.\"\n            ),\n            value=True,\n            advanced=True,\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Path\", name=\"output_path\", method=\"build_path\"),\n        Output(display_name=\"Parameters\", name=\"output_data\", method=\"build_data\"),\n    ]\n\n    def build_path(self) -> Message:\n        path = self.path or \"/\"\n        if not path.startswith(\"/\"):\n            path = \"/\" + path\n        return Message(text=path)\n\n    def build_data(self) -> Data:\n        message: str | Data = \"\"\n        if not self.data:\n            self.status = \"No data provided.\"\n            return Data(data={})\n        try:\n            body = json.loads(self.data or \"{}\")\n        except json.JSONDecodeError:\n            body = {\"payload\": self.data}\n            message = f\"Invalid JSON payload. Please check the format.\\n\\n{self.data}\"\n        data = Data(data=body)\n        if not message:\n            message = data\n        self.status = message\n        return data\n"
+              },
+              "data": {
+                "_input_type": "MultilineInput",
+                "advanced": true,
+                "copy_field": false,
+                "display_name": "Parameters",
+                "dynamic": false,
+                "info": "Receives HTTP GET or POST parameters.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "data",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "page_store": {
+                "_input_type": "TableInput",
+                "advanced": false,
+                "display_name": "Page Store",
+                "dynamic": false,
+                "info": "Contains stored pages. Pages in the store will not be generated again to make requests faster. Delete a page from the store to regenerate it.",
+                "input_types": [
+                  "Data"
+                ],
+                "is_list": true,
+                "list_add_label": "Add More",
+                "name": "page_store",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "table_icon": "Table",
+                "table_schema": {
+                  "columns": [
+                    {
+                      "default": "None",
+                      "description": "Page path",
+                      "disable_edit": false,
+                      "display_name": "Path",
+                      "edit_mode": "popover",
+                      "filterable": true,
+                      "formatter": "text",
+                      "hidden": false,
+                      "name": "path",
+                      "sortable": true,
+                      "type": "str"
+                    },
+                    {
+                      "default": "None",
+                      "description": "Page content",
+                      "disable_edit": false,
+                      "display_name": "Content",
+                      "edit_mode": "popover",
+                      "filterable": true,
+                      "formatter": "text",
+                      "hidden": false,
+                      "name": "content",
+                      "sortable": true,
+                      "type": "str"
+                    }
+                  ]
+                },
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "trigger_icon": "Table",
+                "trigger_text": "Open table",
+                "type": "table",
+                "value": []
+              },
+              "path": {
+                "_input_type": "MultilineInput",
+                "advanced": true,
+                "copy_field": false,
+                "display_name": "Path",
+                "dynamic": false,
+                "info": "Receives the path of the current page.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "path",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "/"
+              },
+              "require_link": {
+                "_input_type": "BoolInput",
+                "advanced": true,
+                "display_name": "Allow linked pages only",
+                "dynamic": false,
+                "info": "If enabled, only the home page (\"/\") and all pages that are linked on any generated page will be accessible. This is useful to prevent users from generating arbitrary pages. Requires the store to be enabled.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "require_link",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              },
+              "url": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": true,
+                "display_name": "URL",
+                "dynamic": false,
+                "info": "",
+                "input_types": [],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "url",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "WEBSITE_URL"
+              },
+              "use_store": {
+                "_input_type": "BoolInput",
+                "advanced": false,
+                "display_name": "Use Page Store",
+                "dynamic": false,
+                "info": "If enabled, generated pages will be stored to speed up future requests.",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "use_store",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_metadata": true,
+                "type": "bool",
+                "value": true
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "WebsiteInput"
+        },
+        "dragging": false,
+        "id": "WebsiteInput-P75N9",
+        "measured": {
+          "height": 424,
+          "width": 320
+        },
+        "position": {
+          "x": -1762.918741043429,
+          "y": -566.0809543338975
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "Prompt-tgndz",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {
+              "template": [
+                "business_description",
+                "website_instructions"
+              ]
+            },
+            "description": "Create a prompt template with dynamic variables.",
+            "display_name": "Prompt",
+            "documentation": "",
+            "edited": false,
+            "error": null,
+            "field_order": [
+              "template",
+              "tool_placeholder"
+            ],
+            "frozen": false,
+            "full_path": null,
+            "icon": "prompts",
+            "is_composition": null,
+            "is_input": null,
+            "is_output": null,
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "name": "",
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Prompt Message",
+                "method": "build_prompt",
+                "name": "prompt",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "priority": null,
+            "template": {
+              "_type": "Component",
+              "business_description": {
+                "advanced": false,
+                "display_name": "business_description",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "business_description",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              },
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.prompts.api_utils import process_prompt_template\nfrom langflow.custom import Component\nfrom langflow.inputs.inputs import DefaultPromptField\nfrom langflow.io import MessageTextInput, Output, PromptInput\nfrom langflow.schema.message import Message\nfrom langflow.template.utils import update_template_values\n\n\nclass PromptComponent(Component):\n    display_name: str = \"Prompt\"\n    description: str = \"Create a prompt template with dynamic variables.\"\n    icon = \"prompts\"\n    trace_type = \"prompt\"\n    name = \"Prompt\"\n\n    inputs = [\n        PromptInput(name=\"template\", display_name=\"Template\"),\n        MessageTextInput(\n            name=\"tool_placeholder\",\n            display_name=\"Tool Placeholder\",\n            tool_mode=True,\n            advanced=True,\n            info=\"A placeholder input for tool mode.\",\n        ),\n    ]\n\n    outputs = [\n        Output(display_name=\"Prompt Message\", name=\"prompt\", method=\"build_prompt\"),\n    ]\n\n    async def build_prompt(self) -> Message:\n        prompt = Message.from_template(**self._attributes)\n        self.status = prompt.text\n        return prompt\n\n    def _update_template(self, frontend_node: dict):\n        prompt_template = frontend_node[\"template\"][\"template\"][\"value\"]\n        custom_fields = frontend_node[\"custom_fields\"]\n        frontend_node_template = frontend_node[\"template\"]\n        _ = process_prompt_template(\n            template=prompt_template,\n            name=\"template\",\n            custom_fields=custom_fields,\n            frontend_node_template=frontend_node_template,\n        )\n        return frontend_node\n\n    async def update_frontend_node(self, new_frontend_node: dict, current_frontend_node: dict):\n        \"\"\"This function is called after the code validation is done.\"\"\"\n        frontend_node = await super().update_frontend_node(new_frontend_node, current_frontend_node)\n        template = frontend_node[\"template\"][\"template\"][\"value\"]\n        # Kept it duplicated for backwards compatibility\n        _ = process_prompt_template(\n            template=template,\n            name=\"template\",\n            custom_fields=frontend_node[\"custom_fields\"],\n            frontend_node_template=frontend_node[\"template\"],\n        )\n        # Now that template is updated, we need to grab any values that were set in the current_frontend_node\n        # and update the frontend_node with those values\n        update_template_values(new_template=frontend_node, previous_template=current_frontend_node[\"template\"])\n        return frontend_node\n\n    def _get_fallback_input(self, **kwargs):\n        return DefaultPromptField(**kwargs)\n"
+              },
+              "template": {
+                "_input_type": "PromptInput",
+                "advanced": false,
+                "display_name": "Template",
+                "dynamic": false,
+                "info": "",
+                "list": false,
+                "list_add_label": "Add More",
+                "name": "template",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "type": "prompt",
+                "value": "You are an experienced and creative web designer. I would like to have a website created for my business.\n\nHere is a description of my business:\n{business_description}\n\nI have these ideas and instructions for my website:\n{website_instructions}\n"
+              },
+              "tool_placeholder": {
+                "_input_type": "MessageTextInput",
+                "advanced": true,
+                "display_name": "Tool Placeholder",
+                "dynamic": false,
+                "info": "A placeholder input for tool mode.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "name": "tool_placeholder",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": true,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": ""
+              },
+              "website_instructions": {
+                "advanced": false,
+                "display_name": "website_instructions",
+                "dynamic": false,
+                "field_type": "str",
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "website_instructions",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "type": "str",
+                "value": ""
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "Prompt"
+        },
+        "dragging": false,
+        "id": "Prompt-tgndz",
+        "measured": {
+          "height": 495,
+          "width": 320
+        },
+        "position": {
+          "x": -1771.1902013611973,
+          "y": 528.0055566561954
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "TextInput-4gfor",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Please enter your business description.",
+            "display_name": "Your Business",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value"
+            ],
+            "frozen": false,
+            "icon": "type",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Message",
+                "method": "text_response",
+                "name": "text",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.io.text import TextComponent\nfrom langflow.io import MultilineInput, Output\nfrom langflow.schema.message import Message\n\n\nclass TextInputComponent(TextComponent):\n    display_name = \"Text Input\"\n    description = \"Get text inputs.\"\n    icon = \"type\"\n    name = \"TextInput\"\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Text\",\n            info=\"Text to be passed as input.\",\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Message\", name=\"text\", method=\"text_response\"),\n    ]\n\n    def text_response(self) -> Message:\n        return Message(\n            text=self.input_value,\n        )\n"
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Text",
+                "dynamic": false,
+                "info": "Text to be passed as input.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "I'm building ACME Inc., an AI-Powered Travel Planner.\n\nACME Inc. offers an application that uses AI to curate personalized travel itineraries based on users' preferences, budget, and cultural interests. It includes features like automatic booking, real-time updates on flight changes, and recommendations for sustainable travel options.\nOur core values include passion for travel, culture, and sustainability.\n"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "TextInput"
+        },
+        "dragging": false,
+        "id": "TextInput-4gfor",
+        "measured": {
+          "height": 230,
+          "width": 320
+        },
+        "position": {
+          "x": -2334.5113773684684,
+          "y": 566.6959372919093
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "TextInput-6GgEn",
+          "node": {
+            "base_classes": [
+              "Message"
+            ],
+            "beta": false,
+            "conditional_paths": [],
+            "custom_fields": {},
+            "description": "Please optionally enter any ideas or instructions you have for your business website.",
+            "display_name": "Website Instructions",
+            "documentation": "",
+            "edited": false,
+            "field_order": [
+              "input_value"
+            ],
+            "frozen": false,
+            "icon": "type",
+            "legacy": false,
+            "metadata": {},
+            "minimized": false,
+            "output_types": [],
+            "outputs": [
+              {
+                "allows_loop": false,
+                "cache": true,
+                "display_name": "Message",
+                "method": "text_response",
+                "name": "text",
+                "selected": "Message",
+                "tool_mode": true,
+                "types": [
+                  "Message"
+                ],
+                "value": "__UNDEFINED__"
+              }
+            ],
+            "pinned": false,
+            "template": {
+              "_type": "Component",
+              "code": {
+                "advanced": true,
+                "dynamic": true,
+                "fileTypes": [],
+                "file_path": "",
+                "info": "",
+                "list": false,
+                "load_from_db": false,
+                "multiline": true,
+                "name": "code",
+                "password": false,
+                "placeholder": "",
+                "required": true,
+                "show": true,
+                "title_case": false,
+                "type": "code",
+                "value": "from langflow.base.io.text import TextComponent\nfrom langflow.io import MultilineInput, Output\nfrom langflow.schema.message import Message\n\n\nclass TextInputComponent(TextComponent):\n    display_name = \"Text Input\"\n    description = \"Get text inputs.\"\n    icon = \"type\"\n    name = \"TextInput\"\n\n    inputs = [\n        MultilineInput(\n            name=\"input_value\",\n            display_name=\"Text\",\n            info=\"Text to be passed as input.\",\n        ),\n    ]\n    outputs = [\n        Output(display_name=\"Message\", name=\"text\", method=\"text_response\"),\n    ]\n\n    def text_response(self) -> Message:\n        return Message(\n            text=self.input_value,\n        )\n"
+              },
+              "input_value": {
+                "_input_type": "MultilineInput",
+                "advanced": false,
+                "copy_field": false,
+                "display_name": "Text",
+                "dynamic": false,
+                "info": "Text to be passed as input.",
+                "input_types": [
+                  "Message"
+                ],
+                "list": false,
+                "list_add_label": "Add More",
+                "load_from_db": false,
+                "multiline": true,
+                "name": "input_value",
+                "placeholder": "",
+                "required": false,
+                "show": true,
+                "title_case": false,
+                "tool_mode": false,
+                "trace_as_input": true,
+                "trace_as_metadata": true,
+                "type": "str",
+                "value": "Please show examples of different travel plans on our website.\n"
+              }
+            },
+            "tool_mode": false
+          },
+          "showNode": true,
+          "type": "TextInput"
+        },
+        "dragging": false,
+        "id": "TextInput-6GgEn",
+        "measured": {
+          "height": 270,
+          "width": 320
+        },
+        "position": {
+          "x": -2335.87418886824,
+          "y": 861.9294906755399
+        },
+        "selected": false,
+        "type": "genericNode"
+      },
+      {
+        "data": {
+          "id": "note-Qpefc",
+          "node": {
+            "description": "# Enter your information here\n\nPlease enter your business description and optionally any further instructions for your website here. Then click the \"Website\" button in the upper right corner to visit your website.\n\nThe website is generated the first time it is visited. This can take a few seconds. The pages are then saved in the page store and further visits are faster. To ensure that pages are recreated after making changes, please delete the page store in the website input component above.\n\n",
+            "display_name": "",
+            "documentation": "",
+            "template": {}
+          },
+          "type": "note"
+        },
+        "height": 906,
+        "id": "note-Qpefc",
+        "measured": {
+          "height": 906,
+          "width": 480
+        },
+        "position": {
+          "x": -2383.185102791423,
+          "y": 247.68276821040536
+        },
+        "resizing": false,
+        "selected": false,
+        "type": "noteNode",
+        "width": 479
+      }
+    ],
+    "viewport": {
+      "x": 732.9995824886713,
+      "y": 240.20440539150263,
+      "zoom": 0.28659107582062104
+    }
+  },
+  "description": "Get a website up and running for your business.",
+  "endpoint_name": null,
+  "icon": "tablet-smartphone",
+  "id": "8d6e49b9-ea30-43bf-8c87-e81d2fe9fbff",
+  "is_component": false,
+  "last_tested_version": "1.3.4",
+  "name": "Have a website",
+  "tags": [
+    "starter_projects",
+    "build-launch"
+  ]
+}

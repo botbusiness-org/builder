@@ -225,6 +225,7 @@ export const SIDEBAR_CATEGORIES = [
   { display_name: "Tools", name: "tools", icon: "Hammer" },
   { display_name: "Logic", name: "logic", icon: "ArrowRightLeft" },
   { display_name: "Helpers", name: "helpers", icon: "Wand2" },
+  { display_name: "Website", name: "website", icon: "Earth" },
 ];
 
 export const SIDEBAR_BUNDLES = [
@@ -291,6 +292,7 @@ export const categoryIcons: Record<string, string> = {
   tools: "Hammer",
   custom: "Edit",
   custom_components: "GradientInfinity",
+  website: "Earth",
 };
 
 export const nodeIconToDisplayIconMap: Record<string, string> = {
@@ -317,6 +319,7 @@ export const nodeIconToDisplayIconMap: Record<string, string> = {
   toolkits: "Package2",
   tools: "Hammer",
   custom_components: "GradientInfinity",
+  website: "Earth",
   ChatInput: "MessagesSquare",
   ChatOutput: "MessagesSquare",
   //Integration Icons

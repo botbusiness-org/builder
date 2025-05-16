@@ -70,6 +70,9 @@ export type FlowStoreType = {
   setOnFlowPage: (onFlowPage: boolean) => void;
   flowPool: FlowPoolType;
   setHasIO: (hasIO: boolean) => void;
+  setHasWebsite: (hasWebsite: boolean) => void;
+  setWebsiteUrl: (websiteUrl: string | undefined) => void;
+  setWebhookUrl: (webhookUrl: string | undefined) => void;
   setInputs: (
     inputs: Array<{ type: string; id: string; displayName: string }>,
   ) => void;
@@ -87,6 +90,9 @@ export type FlowStoreType = {
     displayName: string;
   }>;
   hasIO: boolean;
+  hasWebsite: boolean;
+  websiteUrl: string | undefined;
+  webhookUrl: string | undefined;
   setFlowPool: (flowPool: FlowPoolType) => void;
   addDataToFlowPool: (data: VertexBuildTypeAPI, nodeId: string) => void;
   CleanFlowPool: () => void;

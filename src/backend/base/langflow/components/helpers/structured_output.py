@@ -176,6 +176,9 @@ class StructuredOutputComponent(Component):
             result = result.model_dump()
         if responses := result.get("responses"):
             result = responses[0].model_dump()
+        if messages := result.get("messages"):
+            message = messages[0].model_dump()
+            result = message.get("content").replace("```json", "").replace("```", "")
         if result and "objects" in result:
             return result["objects"]
 

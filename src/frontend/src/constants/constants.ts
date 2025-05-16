@@ -1014,6 +1014,7 @@ export const DEFAULT_TOOLSET_PLACEHOLDER = "Used as a tool";
 
 export const SAVE_API_KEY_ALERT = "API key saved successfully";
 export const PLAYGROUND_BUTTON_NAME = "Run Bot";
+export const WEBSITE_BUTTON_NAME = "Website";
 export const POLLING_MESSAGES = {
   ENDPOINT_NOT_AVAILABLE: "Endpoint not available",
   STREAMING_NOT_SUPPORTED: "Streaming not supported",

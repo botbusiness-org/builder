@@ -3,6 +3,7 @@ from pydantic import BaseModel, Field
 
 class RunPayload(BaseModel):
     run_is_webhook: bool = Field(default=False, serialization_alias="runIsWebhook")
+    run_is_website: bool = Field(default=False, serialization_alias="runIsWebsite")
     run_seconds: int = Field(serialization_alias="runSeconds")
     run_success: bool = Field(serialization_alias="runSuccess")
     run_error_message: str = Field("", serialization_alias="runErrorMessage")

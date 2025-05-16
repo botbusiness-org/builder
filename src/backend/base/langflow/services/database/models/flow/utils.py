@@ -19,6 +19,13 @@ def get_all_webhook_components_in_flow(flow_data: dict | None):
     return [node for node in flow_data.get("nodes", []) if "Webhook" in node.get("id")]
 
 
+def get_all_website_input_components_in_flow(flow_data: dict | None):
+    """Get all website input components in flow data."""
+    if not flow_data:
+        return []
+    return [node for node in flow_data.get("nodes", []) if "WebsiteInput" in node.get("id")]
+
+
 def get_components_versions(flow: Flow):
     versions: dict[str, str] = {}
     if flow.data is None:

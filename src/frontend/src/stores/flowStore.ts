@@ -49,7 +49,11 @@ import {
   validateEdge,
   validateNodes,
 } from "../utils/reactflowUtils";
-import { getInputsAndOutputs } from "../utils/storeUtils";
+import {
+  getInputsAndOutputs,
+  getWebhookUrl,
+  getWebsiteUrl,
+} from "../utils/storeUtils";
 import useAlertStore from "./alertStore";
 import { useDarkStore } from "./darkStore";
 import useFlowsManagerStore from "./flowsManagerStore";
@@ -131,6 +135,15 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
   setHasIO: (hasIO) => {
     set({ hasIO });
   },
+  setHasWebsite: (hasWebsite) => {
+    set({ hasWebsite });
+  },
+  setWebsiteUrl: (websiteUrl) => {
+    set({ websiteUrl });
+  },
+  setWebhookUrl: (webhookUrl) => {
+    set({ webhookUrl });
+  },
   reactFlowInstance: null,
   lastCopiedSelection: null,
   flowPool: {},
@@ -143,6 +156,11 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
   inputs: [],
   outputs: [],
   hasIO: get()?.inputs?.length > 0 || get()?.outputs?.length > 0,
+  hasWebsite:
+    get()?.nodes?.find((node) => node.data.type === "WebsiteInput") !==
+    undefined,
+  websiteUrl: getWebsiteUrl(get()?.currentFlow),
+  webhookUrl: getWebhookUrl(get()?.currentFlow),
   setFlowPool: (flowPool) => {
     set({ flowPool });
   },
@@ -231,6 +249,10 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
       inputs,
       outputs,
       hasIO: inputs.length > 0 || outputs.length > 0,
+      hasWebsite:
+        nodes.find((node) => node.data.type === "WebsiteInput") !== undefined,
+      websiteUrl: getWebsiteUrl(flow),
+      webhookUrl: getWebhookUrl(flow),
       flowPool: {},
       currentFlow: flow,
       positionDictionary: {},
@@ -274,6 +296,9 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
       inputs,
       outputs,
       hasIO: inputs.length > 0 || outputs.length > 0,
+      hasWebsite:
+        newChange.find((node) => node.data.type === "WebsiteInput") !==
+        undefined,
     });
     get().updateCurrentFlow({ nodes: newChange, edges: newEdges });
     if (get().autoSaveFlow) {
@@ -978,6 +1003,7 @@ const useFlowStore = create<FlowStoreType>((set, get) => ({
       edges: [],
       flowState: undefined,
       hasIO: false,
+      hasWebsite: false,
       inputs: [],
       outputs: [],
       flowPool: {},

@@ -22,7 +22,7 @@ from pydantic import PydanticDeprecatedSince20
 from pydantic_core import PydanticSerializationError
 from starlette.middleware.base import BaseHTTPMiddleware, RequestResponseEndpoint
 
-from langflow.api import health_check_router, log_router, router
+from langflow.api import health_check_router, log_router, router, website_router
 from langflow.initial_setup.setup import (
     create_or_update_starter_projects,
     initialize_super_user_if_needed,
@@ -285,6 +285,7 @@ def create_app():
     app.include_router(router)
     app.include_router(health_check_router)
     app.include_router(log_router)
+    app.include_router(website_router)
 
     @app.exception_handler(Exception)
     async def exception_handler(_request: Request, exc: Exception):

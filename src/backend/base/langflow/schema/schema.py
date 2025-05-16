@@ -12,8 +12,8 @@ from langflow.serialization.serialization import serialize
 
 INPUT_FIELD_NAME = "input_value"
 
-InputType = Literal["chat", "text", "any"]
-OutputType = Literal["chat", "text", "any", "debug"]
+InputType = Literal["chat", "text", "website", "any"]
+OutputType = Literal["chat", "text", "website", "any", "debug"]
 
 
 class LogType(str, Enum):

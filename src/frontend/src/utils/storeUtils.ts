@@ -50,3 +50,19 @@ export function getInputsAndOutputs(nodes: Node[]) {
   });
   return { inputs, outputs };
 }
+
+export function getWebsiteUrl(flow: FlowType | undefined): string | undefined {
+  const endpoint = flow?.endpoint_name ?? flow?.id;
+  if (!endpoint) {
+    return undefined;
+  }
+  return `${window.location.protocol}//${window.location.host}/website/${endpoint}`;
+}
+
+export function getWebhookUrl(flow: FlowType | undefined): string | undefined {
+  const endpoint = flow?.endpoint_name ?? flow?.id;
+  if (!endpoint) {
+    return undefined;
+  }
+  return `${window.location.protocol}//${window.location.host}/api/v1/webhook/${endpoint}`;
+}

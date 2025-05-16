@@ -35,6 +35,8 @@ export default function PublishDropdown() {
   const setCurrentFlow = useFlowStore((state) => state.setCurrentFlow);
   const isPublished = currentFlow?.access_type === "PUBLIC";
   const hasIO = useFlowStore((state) => state.hasIO);
+  const hasWebsite = useFlowStore((state) => state.hasWebsite);
+  const websiteUrl = useFlowStore((state) => state.websiteUrl);
   const isAuth = useAuthStore((state) => !!state.autoLogin);
   const [openApiModal, setOpenApiModal] = useState(false);
 
@@ -130,7 +132,22 @@ export default function PublishDropdown() {
               </div>
             </DropdownMenuItem>
           )}
-
+          {hasWebsite && (
+            <DropdownMenuItem
+              onClick={() => {
+                navigator.clipboard.writeText(websiteUrl ?? "");
+              }}
+              className="deploy-dropdown-item group"
+            >
+              <div className="group-hover:bg-accent">
+                <IconComponent
+                  name="website"
+                  className={`${groupStyle} icon-size mr-2`}
+                />
+                <span>Copy website URL</span>
+              </div>
+            </DropdownMenuItem>
+          )}
           {ENABLE_PUBLISH && (
             <ShadTooltipComponent
               styleClasses="truncate"
@@ -140,7 +157,7 @@ export default function PublishDropdown() {
                   ? isPublished
                     ? encodeURI(`${domain}/bot/${flowId}`)
                     : "Activate to share a public version of this bot"
-                  : "Add a Chat Input or Chat Output to access your flow"
+                  : "Add a Chat Input or Chat Output to publish this bot"
               }
             >
               <div

@@ -578,9 +578,10 @@
                 "info": "",
                 "name": "model_name",
                 "options": [
-                  "mixtral8x22b",
-                  "mixtral",
-                  "llama3"
+                  "mistral24b",
+                  "reasoning",
+                  "llama3",
+                  "granite"
                 ],
                 "options_metadata": [],
                 "placeholder": "",
