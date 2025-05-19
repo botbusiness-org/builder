@@ -45,6 +45,9 @@ http {
         location /health {
             proxy_pass ${BACKEND_URL};
         }
+        location /website {
+            proxy_pass ${BACKEND_URL};
+        }
 
         include /etc/nginx/extra-conf.d/*.conf;
     }
