@@ -61,6 +61,26 @@ async def _update_page_store(
         raise HTTPException(status_code=500, detail=str(exc)) from exc
 
 
+@website_router.get("/website/{flow_id_or_name}", response_class=HTMLResponse)
+async def redirect_to_trailing_slash(request: Request):
+    path = request.url.path
+    if not path.endswith("/"):
+        path += "/"
+    query = f"?{request.url.query}" if request.url.query else ""
+    html = f"""
+    <html>
+      <head>
+        <meta http-equiv="refresh" content="0; url={path}{query}">
+        <script>window.location.replace("{path}{query}");</script>
+      </head>
+      <body>
+        <p>Redirecting to <a href="{path}{query}">{path}{query}</a> ...</p>
+      </body>
+    </html>
+    """
+    return HTMLResponse(content=html)
+
+
 @website_router.api_route(
     "/website/{flow_id_or_name}/{page_path:path}", methods=["GET", "POST"], response_class=HTMLResponse
 )

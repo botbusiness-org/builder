@@ -56,7 +56,7 @@ export function getWebsiteUrl(flow: FlowType | undefined): string | undefined {
   if (!endpoint) {
     return undefined;
   }
-  return `${window.location.protocol}//${window.location.host}/website/${endpoint}`;
+  return `${window.location.protocol}//${window.location.host}/website/${endpoint}/`;
 }
 
 export function getWebhookUrl(flow: FlowType | undefined): string | undefined {
