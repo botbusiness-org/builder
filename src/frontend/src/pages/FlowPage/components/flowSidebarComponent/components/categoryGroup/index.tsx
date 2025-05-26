@@ -21,7 +21,7 @@ export const CategoryGroup = memo(function CategoryGroup({
   sensitiveSort,
 }: CategoryGroupProps) {
   return (
-    <SidebarGroup className="p-3">
+    <SidebarGroup className="px-3">
       <SidebarGroupContent>
         <SidebarMenu>
           {Object.entries(dataFilter)
