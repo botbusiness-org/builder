@@ -389,7 +389,9 @@ export default function ChatMessage({
                               <MarkdownField
                                 isAudioMessage={isAudioMessage}
                                 chat={chat}
-                                isEmpty={isEmpty}
+                                isEmpty={
+                                  isEmpty && !chat.content_blocks?.length
+                                }
                                 chatMessage={chatMessage}
                                 editedFlag={editedFlag}
                               />

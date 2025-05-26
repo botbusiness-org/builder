@@ -210,6 +210,7 @@ export const SIDEBAR_CATEGORIES = [
   { display_name: "Data", name: "data", icon: "Database" },
   { display_name: "Processing", name: "processing", icon: "ListFilter" },
   { display_name: "Models", name: "models", icon: "BrainCircuit" },
+  { display_name: "Image Models", name: "image_models", icon: "Image" },
   { display_name: "Vector Stores", name: "vectorstores", icon: "Layers" },
   { display_name: "Embeddings", name: "embeddings", icon: "Binary" },
   { display_name: "Agents", name: "agents", icon: "Bot" },

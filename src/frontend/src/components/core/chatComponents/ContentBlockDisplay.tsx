@@ -28,7 +28,7 @@ export function ContentBlockDisplay({
   chatId,
   playgroundPage,
 }: ContentBlockDisplayProps) {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   const totalDuration = isLoading
     ? undefined
